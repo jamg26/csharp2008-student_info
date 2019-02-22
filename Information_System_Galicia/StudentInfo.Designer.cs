@@ -61,9 +61,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(8, 34);
+            this.textBox1.Location = new System.Drawing.Point(6, 34);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(121, 21);
             this.textBox1.TabIndex = 0;
             // 
             // label1
@@ -92,7 +92,7 @@
             this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox2.Location = new System.Drawing.Point(6, 35);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(160, 20);
+            this.textBox2.Size = new System.Drawing.Size(160, 21);
             this.textBox2.TabIndex = 0;
             // 
             // label3
@@ -110,7 +110,7 @@
             this.textBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox3.Location = new System.Drawing.Point(172, 35);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(142, 20);
+            this.textBox3.Size = new System.Drawing.Size(142, 21);
             this.textBox3.TabIndex = 1;
             // 
             // label4
@@ -128,7 +128,7 @@
             this.textBox4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox4.Location = new System.Drawing.Point(331, 35);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(175, 20);
+            this.textBox4.Size = new System.Drawing.Size(175, 21);
             this.textBox4.TabIndex = 2;
             // 
             // label5
@@ -146,7 +146,7 @@
             this.textBox5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox5.Location = new System.Drawing.Point(6, 78);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(500, 20);
+            this.textBox5.Size = new System.Drawing.Size(500, 21);
             this.textBox5.TabIndex = 3;
             // 
             // label6
@@ -183,7 +183,7 @@
             // 
             this.textBox8.Location = new System.Drawing.Point(6, 211);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(160, 20);
+            this.textBox8.Size = new System.Drawing.Size(160, 21);
             this.textBox8.TabIndex = 8;
             // 
             // label9
@@ -201,14 +201,14 @@
             this.textBox9.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox9.Location = new System.Drawing.Point(172, 211);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(227, 20);
+            this.textBox9.Size = new System.Drawing.Size(227, 21);
             this.textBox9.TabIndex = 9;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(6, 61);
+            this.label10.Location = new System.Drawing.Point(4, 72);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(51, 9);
             this.label10.TabIndex = 17;
@@ -218,7 +218,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(6, 105);
+            this.label11.Location = new System.Drawing.Point(4, 119);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(39, 9);
             this.label11.TabIndex = 19;
@@ -228,11 +228,11 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.comboBox1.Location = new System.Drawing.Point(8, 73);
+            "FIRST YEAR",
+            "SECOND YEAR",
+            "THIRD YEAR",
+            "FOURTH YEAR"});
+            this.comboBox1.Location = new System.Drawing.Point(6, 84);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 1;
@@ -245,7 +245,7 @@
             "FEMALE"});
             this.comboBox2.Location = new System.Drawing.Point(6, 169);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(59, 21);
+            this.comboBox2.Size = new System.Drawing.Size(79, 21);
             this.comboBox2.TabIndex = 7;
             // 
             // comboBox3
@@ -331,12 +331,13 @@
             this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Font = new System.Drawing.Font("Roboto", 8.25F);
             this.groupBox1.Location = new System.Drawing.Point(26, 13);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(515, 249);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Basic Information";
+            this.groupBox1.Text = "BASIC INFORMATION";
             // 
             // comboBox5
             // 
@@ -412,12 +413,13 @@
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Font = new System.Drawing.Font("Roboto", 8.25F);
             this.groupBox2.Location = new System.Drawing.Point(26, 283);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(515, 158);
             this.groupBox2.TabIndex = 26;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "School Information";
+            this.groupBox2.Text = "SCHOOL INFORMATION";
             // 
             // comboBox6
             // 
@@ -430,7 +432,7 @@
             "BSCrim",
             "BEED",
             "TECHVOC"});
-            this.comboBox6.Location = new System.Drawing.Point(8, 117);
+            this.comboBox6.Location = new System.Drawing.Point(6, 131);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(121, 21);
             this.comboBox6.TabIndex = 2;
@@ -452,9 +454,10 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Font = new System.Drawing.Font("Roboto", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "StudentInfo";
-            this.Text = "Student Info";
+            this.Text = "STUDENT INFORMATION";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
