@@ -1,0 +1,10 @@
+C:\Users\jammm\Desktop\dcc_visual\Information_System_Galicia\Information_System_Galicia\bin\Release\Information_System_Galicia.exe
+C:\Users\jammm\Desktop\dcc_visual\Information_System_Galicia\Information_System_Galicia\bin\Release\Information_System_Galicia.pdb
+C:\Users\jammm\Desktop\dcc_visual\Information_System_Galicia\Information_System_Galicia\obj\Release\ResolveAssemblyReference.cache
+C:\Users\jammm\Desktop\dcc_visual\Information_System_Galicia\Information_System_Galicia\obj\Release\Information_System_Galicia.StudentInfo.resources
+C:\Users\jammm\Desktop\dcc_visual\Information_System_Galicia\Information_System_Galicia\obj\Release\Information_System_Galicia.Login.resources
+C:\Users\jammm\Desktop\dcc_visual\Information_System_Galicia\Information_System_Galicia\obj\Release\Information_System_Galicia.Menu.resources
+C:\Users\jammm\Desktop\dcc_visual\Information_System_Galicia\Information_System_Galicia\obj\Release\Information_System_Galicia.Properties.Resources.resources
+C:\Users\jammm\Desktop\dcc_visual\Information_System_Galicia\Information_System_Galicia\obj\Release\Information_System_Galicia.csproj.GenerateResource.Cache
+C:\Users\jammm\Desktop\dcc_visual\Information_System_Galicia\Information_System_Galicia\obj\Release\Information_System_Galicia.exe
+C:\Users\jammm\Desktop\dcc_visual\Information_System_Galicia\Information_System_Galicia\obj\Release\Information_System_Galicia.pdb

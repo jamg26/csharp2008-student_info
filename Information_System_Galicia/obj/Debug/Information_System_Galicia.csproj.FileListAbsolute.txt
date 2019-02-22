@@ -1,0 +1,28 @@
+C:\Users\pc34\Documents\Visual Studio 2008\Projects\Information_System_Galicia\Information_System_Galicia\bin\Debug\Information_System_Galicia.exe
+C:\Users\pc34\Documents\Visual Studio 2008\Projects\Information_System_Galicia\Information_System_Galicia\bin\Debug\Information_System_Galicia.pdb
+C:\Users\pc34\Documents\Visual Studio 2008\Projects\Information_System_Galicia\Information_System_Galicia\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\pc34\Documents\Visual Studio 2008\Projects\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.Form1.resources
+C:\Users\pc34\Documents\Visual Studio 2008\Projects\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.Properties.Resources.resources
+C:\Users\pc34\Documents\Visual Studio 2008\Projects\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.csproj.GenerateResource.Cache
+C:\Users\pc34\Documents\Visual Studio 2008\Projects\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.exe
+C:\Users\pc34\Documents\Visual Studio 2008\Projects\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.pdb
+D:\Galicia\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.exe
+D:\Galicia\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.pdb
+D:\Galicia\Information_System_Galicia\Information_System_Galicia\obj\Debug\ResolveAssemblyReference.cache
+D:\Galicia\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.Login.resources
+D:\Galicia\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.Properties.Resources.resources
+D:\Galicia\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.csproj.GenerateResource.Cache
+D:\Galicia\Information_System_Galicia\Information_System_Galicia\bin\Debug\Information_System_Galicia.exe
+D:\Galicia\Information_System_Galicia\Information_System_Galicia\bin\Debug\Information_System_Galicia.pdb
+D:\Galicia\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.Menu.resources
+D:\Galicia\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.StudentInfo.resources
+C:\Users\jammm\Desktop\dcc_visual\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.exe
+C:\Users\jammm\Desktop\dcc_visual\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.pdb
+C:\Users\jammm\Desktop\dcc_visual\Information_System_Galicia\Information_System_Galicia\bin\Debug\Information_System_Galicia.exe
+C:\Users\jammm\Desktop\dcc_visual\Information_System_Galicia\Information_System_Galicia\bin\Debug\Information_System_Galicia.pdb
+C:\Users\jammm\Desktop\dcc_visual\Information_System_Galicia\Information_System_Galicia\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\jammm\Desktop\dcc_visual\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.StudentInfo.resources
+C:\Users\jammm\Desktop\dcc_visual\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.Login.resources
+C:\Users\jammm\Desktop\dcc_visual\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.Menu.resources
+C:\Users\jammm\Desktop\dcc_visual\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.Properties.Resources.resources
+C:\Users\jammm\Desktop\dcc_visual\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.csproj.GenerateResource.Cache
