@@ -75,5 +75,21 @@ namespace Information_System_Galicia
 
         }
 
+        private void button1_MouseHover(object sender, EventArgs e) {
+            button1.ForeColor = Color.Red;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e) {
+            button1.ForeColor = Color.Black;
+        }
+
+        private void button1_Enter(object sender, EventArgs e) {
+            button1.ForeColor = Color.Red;
+        }
+
+        private void button1_Leave(object sender, EventArgs e) {
+            button1.ForeColor = Color.Black;
+        }
+
     }
 }

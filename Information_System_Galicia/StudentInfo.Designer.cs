@@ -85,7 +85,6 @@
             this.label2.Size = new System.Drawing.Size(53, 9);
             this.label2.TabIndex = 3;
             this.label2.Text = "FIRST NAME";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // textBox2
             // 
@@ -199,10 +198,14 @@
             // textBox9
             // 
             this.textBox9.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox9.ForeColor = System.Drawing.SystemColors.GrayText;
             this.textBox9.Location = new System.Drawing.Point(172, 211);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(227, 21);
             this.textBox9.TabIndex = 9;
+            this.textBox9.Text = "SOMEONE@EXAMPLE.COM";
+            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
+            this.textBox9.Enter += new System.EventHandler(this.textBox9_Enter);
             // 
             // label10
             // 

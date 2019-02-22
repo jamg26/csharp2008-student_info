@@ -16,14 +16,22 @@ namespace Information_System_Galicia
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
         }
+
+        private void textBox9_Enter(object sender, EventArgs e)
+        {
+            if (textBox9.Text == "SOMEONE@EXAMPLE.COM") {
+                textBox9.Text = "";
+            }
+            textBox9.ForeColor = Color.Black;
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e) {
+
+        }
+
     }
 }

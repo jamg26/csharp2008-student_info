@@ -98,7 +98,11 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "LOG-IN";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Leave += new System.EventHandler(this.button1_Leave);
+            this.button1.Enter += new System.EventHandler(this.button1_Enter);
+            this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
             // 
             // Login
             // 
