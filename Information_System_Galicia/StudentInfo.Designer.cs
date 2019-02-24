@@ -53,7 +53,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.courseBox = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -63,8 +63,9 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(6, 34);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 21);
+            this.textBox1.Size = new System.Drawing.Size(121, 20);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -91,8 +92,9 @@
             this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox2.Location = new System.Drawing.Point(6, 35);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(160, 21);
+            this.textBox2.Size = new System.Drawing.Size(160, 20);
             this.textBox2.TabIndex = 0;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
             // 
@@ -109,8 +111,9 @@
             this.textBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox3.Location = new System.Drawing.Point(172, 35);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(142, 21);
+            this.textBox3.Size = new System.Drawing.Size(142, 20);
             this.textBox3.TabIndex = 1;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label4
             // 
@@ -127,8 +130,9 @@
             this.textBox4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox4.Location = new System.Drawing.Point(331, 35);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(175, 21);
+            this.textBox4.Size = new System.Drawing.Size(175, 20);
             this.textBox4.TabIndex = 2;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label5
             // 
@@ -145,8 +149,9 @@
             this.textBox5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox5.Location = new System.Drawing.Point(6, 78);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(500, 21);
+            this.textBox5.Size = new System.Drawing.Size(500, 20);
             this.textBox5.TabIndex = 3;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label6
             // 
@@ -182,7 +187,7 @@
             // 
             this.textBox8.Location = new System.Drawing.Point(6, 211);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(160, 21);
+            this.textBox8.Size = new System.Drawing.Size(160, 20);
             this.textBox8.TabIndex = 8;
             // 
             // label9
@@ -201,7 +206,7 @@
             this.textBox9.ForeColor = System.Drawing.SystemColors.GrayText;
             this.textBox9.Location = new System.Drawing.Point(172, 211);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(227, 21);
+            this.textBox9.Size = new System.Drawing.Size(227, 20);
             this.textBox9.TabIndex = 9;
             this.textBox9.Text = "SOMEONE@EXAMPLE.COM";
             this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
@@ -239,6 +244,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox2
             // 
@@ -250,6 +256,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(79, 21);
             this.comboBox2.TabIndex = 7;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // comboBox3
             // 
@@ -272,6 +279,7 @@
             this.comboBox3.Size = new System.Drawing.Size(66, 21);
             this.comboBox3.TabIndex = 4;
             this.comboBox3.Text = "Month";
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // comboBox4
             // 
@@ -334,7 +342,7 @@
             this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Font = new System.Drawing.Font("Roboto", 8.25F);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.groupBox1.Location = new System.Drawing.Point(26, 13);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(515, 249);
@@ -410,13 +418,13 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.comboBox6);
+            this.groupBox2.Controls.Add(this.courseBox);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Font = new System.Drawing.Font("Roboto", 8.25F);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.groupBox2.Location = new System.Drawing.Point(26, 283);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(515, 158);
@@ -424,10 +432,10 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "SCHOOL INFORMATION";
             // 
-            // comboBox6
+            // courseBox
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
+            this.courseBox.FormattingEnabled = true;
+            this.courseBox.Items.AddRange(new object[] {
             "BSIT",
             "IT",
             "BSHRM",
@@ -435,10 +443,11 @@
             "BSCrim",
             "BEED",
             "TECHVOC"});
-            this.comboBox6.Location = new System.Drawing.Point(6, 131);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(121, 21);
-            this.comboBox6.TabIndex = 2;
+            this.courseBox.Location = new System.Drawing.Point(6, 131);
+            this.courseBox.Name = "courseBox";
+            this.courseBox.Size = new System.Drawing.Size(121, 21);
+            this.courseBox.TabIndex = 2;
+            this.courseBox.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -448,6 +457,7 @@
             this.button1.TabIndex = 27;
             this.button1.Text = "SAVE";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // StudentInfo
             // 
@@ -457,7 +467,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Font = new System.Drawing.Font("Roboto", 8.25F);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "StudentInfo";
             this.Text = "STUDENT INFORMATION";
@@ -496,7 +506,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox courseBox;
         private System.Windows.Forms.Button button1;
     }
 }
