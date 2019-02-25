@@ -85,13 +85,13 @@ namespace Information_System_Galicia
                 sda.InsertCommand.ExecuteNonQuery();
                 connect.Close();
                 ClearEntry();
-                obj.Show();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
             MessageBox.Show("Record is already added!");
+            obj.Show();
         }
         void ClearEntry() {
             textBox1.Text = "";

@@ -9,10 +9,23 @@ namespace Information_System_Galicia
 {
     class dbClass
     {
+        public string dbS = "sqlserverinstance.crxgtyhmldr1.ap-southeast-1.rds.amazonaws.com";
+        public string dbN = "Info_Sys_Galicia";
+        public string dbU = "jamg";
         public static SqlConnection getConnection()
         {
-            SqlConnection conn = new SqlConnection("Data Source = sqlserverinstance.crxgtyhmldr1.ap-southeast-1.rds.amazonaws.com; Initial Catalog = Info_Sys_Galicia; User ID=jamg;Password=Jamuel26;");
+            string dbServer = "sqlserverinstance.crxgtyhmldr1.ap-southeast-1.rds.amazonaws.com";
+            string dbName = "Info_Sys_Galicia";
+            string dbUser = "jamg";
+            SqlConnection conn = new SqlConnection("Data Source = " + dbServer + "; Initial Catalog = " + dbName + "; User ID=" + dbUser + ";Password=Jamuel26;");
+            //Menu mm = new Menu();
+            //mm.dbServer.Text = dbServer;
+            //mm.dbName.Text = dbName;
+            //mm.dbUser.Text = dbUser;
             return conn;
+        }
+        public string getDbServer() {
+            return dbS;
         }
     }
 }

@@ -43,12 +43,20 @@ namespace Information_System_Galicia
             conn.Close();
             if (dt.Rows.Count > 0)
             {
-                MessageBox.Show("Access Granted!");
+                //MessageBox.Show("Access Granted!");
                 this.Hide();
                 //MainMenu mm = new MainMenu();
                 //mm.Show();
+                dbClass db = new dbClass();
                 Menu mm = new Menu();
+
+                mm.dbServer.Text = db.dbS;
+                mm.dbName.Text = db.dbN;
+                mm.dbUser.Text = db.dbU;
+
+                mm.userLogged.Text = textBox2.Text;
                 mm.Show();
+                
             }
             else
             {
@@ -89,6 +97,11 @@ namespace Information_System_Galicia
 
         private void button1_Leave(object sender, EventArgs e) {
             button1.ForeColor = Color.Black;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
 
     }
