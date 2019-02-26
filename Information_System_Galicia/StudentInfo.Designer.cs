@@ -234,6 +234,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "FIRST YEAR",
@@ -248,10 +249,12 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "MALE",
-            "FEMALE"});
+            "FEMALE",
+            "PREFER NOT TO SAY"});
             this.comboBox2.Location = new System.Drawing.Point(6, 169);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(79, 21);
@@ -260,6 +263,7 @@
             // 
             // comboBox3
             // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             "January",
@@ -278,11 +282,11 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(66, 21);
             this.comboBox3.TabIndex = 4;
-            this.comboBox3.Text = "Month";
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // comboBox4
             // 
+            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
             "1",
@@ -320,7 +324,7 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(66, 21);
             this.comboBox4.TabIndex = 5;
-            this.comboBox4.Text = "Day";
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -352,6 +356,7 @@
             // 
             // comboBox5
             // 
+            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Items.AddRange(new object[] {
             "1954",
@@ -414,7 +419,7 @@
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(66, 21);
             this.comboBox5.TabIndex = 6;
-            this.comboBox5.Text = "Year";
+            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -434,15 +439,8 @@
             // 
             // courseBox
             // 
+            this.courseBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.courseBox.FormattingEnabled = true;
-            this.courseBox.Items.AddRange(new object[] {
-            "BSIT",
-            "IT",
-            "BSHRM",
-            "BSBA",
-            "BSCrim",
-            "BEED",
-            "TECHVOC"});
             this.courseBox.Location = new System.Drawing.Point(6, 131);
             this.courseBox.Name = "courseBox";
             this.courseBox.Size = new System.Drawing.Size(121, 21);
@@ -471,6 +469,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "StudentInfo";
             this.Text = "STUDENT INFORMATION";
+            this.Load += new System.EventHandler(this.StudentInfo_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

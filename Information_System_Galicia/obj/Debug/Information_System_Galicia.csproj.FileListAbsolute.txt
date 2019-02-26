@@ -37,3 +37,4 @@ D:\Galicia\repo\Information_System_Galicia\obj\Debug\Information_System_Galicia.
 D:\Galicia\repo\Information_System_Galicia\obj\Debug\Information_System_Galicia.csproj.GenerateResource.Cache
 D:\Galicia\repo\Information_System_Galicia\bin\Debug\Information_System_Galicia.exe
 D:\Galicia\repo\Information_System_Galicia\bin\Debug\Information_System_Galicia.pdb
+C:\Users\jammm\Desktop\dcc_visual\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.viewInfo.resources

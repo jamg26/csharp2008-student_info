@@ -32,13 +32,13 @@ namespace Information_System_Galicia
                      SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Student_Info", conn);
                      sda.Fill(dt);
                      dataGridView1.DataSource = dt;
-                     dataGridView1.Columns[0].Width = 100;
-                     dataGridView1.Columns[1].Width = 100;
-                     dataGridView1.Columns[2].Width = 100;
-                     dataGridView1.Columns[3].Width = 100;
-                     dataGridView1.Columns[4].Width = 100;
-                     dataGridView1.Columns[5].Width = 100;
-                     dataGridView1.Columns[6].Width = 100;
+                     //dataGridView1.Columns[0].Width = 100;
+                     //dataGridView1.Columns[1].Width = 100;
+                     //dataGridView1.Columns[2].Width = 100;
+                     //dataGridView1.Columns[3].Width = 100;
+                     //dataGridView1.Columns[4].Width = 100;
+                     //dataGridView1.Columns[5].Width = 100;
+                     //dataGridView1.Columns[6].Width = 100;
 
                      dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                      dataGridView1.Columns[0].ReadOnly = true;
@@ -48,6 +48,10 @@ namespace Information_System_Galicia
                      dataGridView1.Columns[4].ReadOnly = true;
                      dataGridView1.Columns[5].ReadOnly = true;
                      dataGridView1.Columns[6].ReadOnly = true;
+                     dataGridView1.Columns[7].ReadOnly = true;
+                     dataGridView1.Columns[8].ReadOnly = true;
+                     dataGridView1.Columns[9].ReadOnly = true;
+                     dataGridView1.Columns[10].ReadOnly = true;
 
                      conn.Close();
                  }
