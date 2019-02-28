@@ -19,7 +19,7 @@ namespace Information_System_Galicia
         public Login()
         {
             InitializeComponent();
-            this.ActiveControl = textBox2;
+            //this.ActiveControl = textBox2;
             this.AcceptButton = button1;
         }
 
@@ -84,24 +84,34 @@ namespace Information_System_Galicia
         }
 
         private void button1_MouseHover(object sender, EventArgs e) {
-            button1.ForeColor = Color.Red;
+            //button1.ForeColor = Color.Red;
         }
 
         private void button1_MouseLeave(object sender, EventArgs e) {
-            button1.ForeColor = Color.Black;
+            //button1.ForeColor = Color.Black;
         }
 
         private void button1_Enter(object sender, EventArgs e) {
-            button1.ForeColor = Color.Red;
+            //button1.ForeColor = Color.Red;
         }
 
         private void button1_Leave(object sender, EventArgs e) {
-            button1.ForeColor = Color.Black;
+            //button1.ForeColor = Color.Black;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox2_Enter(object sender, EventArgs e) {
+            textBox2.Text = "";
+            textBox2.ForeColor = Color.Black;
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e) {
+            textBox1.Text = "";
+            textBox1.ForeColor = Color.Black;
         }
 
     }

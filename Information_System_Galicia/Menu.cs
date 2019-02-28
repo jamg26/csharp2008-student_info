@@ -72,5 +72,15 @@ namespace Information_System_Galicia
         {
             getStudentsInfo();
         }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e) {
+            Login login = new Login();
+            this.Hide();
+            login.Show();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e) {
+
+        }
     }
 }

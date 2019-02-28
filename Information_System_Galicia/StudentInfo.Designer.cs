@@ -468,6 +468,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "StudentInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "STUDENT INFORMATION";
             this.Load += new System.EventHandler(this.StudentInfo_Load);
             this.groupBox1.ResumeLayout(false);

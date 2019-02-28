@@ -38,7 +38,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBox1.ForeColor = System.Drawing.SystemColors.GrayText;
             this.textBox1.Location = new System.Drawing.Point(6, 52);
             this.textBox1.Name = "textBox1";
             this.textBox1.PasswordChar = '*';
@@ -46,23 +46,25 @@
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "Password";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             // 
             // textBox2
             // 
-            this.textBox2.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBox2.ForeColor = System.Drawing.SystemColors.GrayText;
             this.textBox2.Location = new System.Drawing.Point(6, 23);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(274, 20);
             this.textBox2.TabIndex = 1;
             this.textBox2.Text = "Username";
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(205, 78);
+            this.button1.Location = new System.Drawing.Point(205, 89);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
+            this.button1.TabIndex = 0;
             this.button1.Text = "LOG-IN";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
@@ -82,6 +84,7 @@
             this.groupBox1.Size = new System.Drawing.Size(288, 118);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Authentication";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // Login
