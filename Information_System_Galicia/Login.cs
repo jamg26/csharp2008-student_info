@@ -49,10 +49,12 @@ namespace Information_System_Galicia
                 //mm.Show();
                 dbClass db = new dbClass();
                 Menu mm = new Menu();
+                DateTime dtime = DateTime.Now;
 
                 mm.dbServer.Text = db.dbS;
                 mm.dbName.Text = db.dbN;
                 mm.dbUser.Text = db.dbU;
+                mm.lastLog.Text = dtime.ToString("MM/dd/yyyy h:mm tt");
 
                 mm.userLogged.Text = textBox2.Text;
                 mm.Show();
@@ -60,6 +62,7 @@ namespace Information_System_Galicia
             }
             else
             {
+                pictureBox1.Image = Properties.Resources.dinogameover;
                 MessageBox.Show("Access Denied!");
                 textBox2.Clear();
                 textBox1.Clear();
@@ -112,6 +115,14 @@ namespace Information_System_Galicia
         private void textBox1_Enter(object sender, EventArgs e) {
             textBox1.Text = "";
             textBox1.ForeColor = Color.Black;
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e) {
+
+        }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e) {
+            pictureBox1.Image = Properties.Resources.dino;
         }
 
     }

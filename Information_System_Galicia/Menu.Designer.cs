@@ -52,6 +52,8 @@
             this.viewInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lastLog = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -211,6 +213,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.lastLog);
+            this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.userLogged);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Location = new System.Drawing.Point(348, 28);
@@ -280,6 +284,24 @@
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Last Logged:";
+            // 
+            // lastLog
+            // 
+            this.lastLog.AutoSize = true;
+            this.lastLog.Location = new System.Drawing.Point(83, 42);
+            this.lastLog.Name = "lastLog";
+            this.lastLog.Size = new System.Drawing.Size(10, 13);
+            this.lastLog.TabIndex = 3;
+            this.lastLog.Text = "-";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,5 +355,7 @@
         private System.Windows.Forms.ToolStripMenuItem viewInformationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label lastLog;
     }
 }
