@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
+using System.Net.Mail;
+
 
 namespace Information_System_Galicia
 {
@@ -58,14 +60,33 @@ namespace Information_System_Galicia
             } catch (Exception ex) {
                 MessageBox.Show(ex.Message);
             }
-        }
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
+            SmtpClient client = new SmtpClient();
+            client.Port = 587;
+            client.Host = "smtp.gmail.com";
+            client.EnableSsl = true;
+            client.Timeout = 10000;
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            client.UseDefaultCredentials = false;
+            client.Credentials = new System.Net.NetworkCredential("jammmg26@gmail.com", "12261994");
+
+            MailAddress from = new MailAddress("jammmg26@gmail.com", "Student Registration");
+            MailAddress to = new MailAddress(textBox9.Text, textBox2.Text);
+            MailMessage mm = new MailMessage(from, to);
+            mm.Subject = "You have successfully registered";
+            mm.Body = "Hello " + textBox2.Text;
+            mm.BodyEncoding = UTF8Encoding.UTF8;
+            mm.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
+
+            client.Send(mm);
+
             string bday = comboBox3.Text + " " + comboBox4.Text + ", " + comboBox5.Text;
             try
             {
-                
                 SqlDataAdapter sda = new SqlDataAdapter();
                 SqlCommandBuilder cmd = new SqlCommandBuilder(sda);
                 sda.InsertCommand = new SqlCommand("INSERT INTO Student_Info (studentID, FirstName, MiddleName, LastName, Address, BirthDate, Gender, Contact, Email, YearLevel, Course) VALUES (@stud_id, @stud_fname, @stud_mname, @stud_lname, @stud_address, @BirthDate, @Gender, @Contact, @Email, @stud_year, @stud_course)", connect);

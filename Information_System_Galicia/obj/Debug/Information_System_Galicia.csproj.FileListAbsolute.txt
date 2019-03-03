@@ -38,3 +38,14 @@ D:\Galicia\repo\Information_System_Galicia\obj\Debug\Information_System_Galicia.
 D:\Galicia\repo\Information_System_Galicia\bin\Debug\Information_System_Galicia.exe
 D:\Galicia\repo\Information_System_Galicia\bin\Debug\Information_System_Galicia.pdb
 C:\Users\jammm\Desktop\dcc_visual\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.viewInfo.resources
+C:\Users\jammm\Desktop\repositories\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.exe
+C:\Users\jammm\Desktop\repositories\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.pdb
+C:\Users\jammm\Desktop\repositories\Information_System_Galicia\Information_System_Galicia\bin\Debug\Information_System_Galicia.exe
+C:\Users\jammm\Desktop\repositories\Information_System_Galicia\Information_System_Galicia\bin\Debug\Information_System_Galicia.pdb
+C:\Users\jammm\Desktop\repositories\Information_System_Galicia\Information_System_Galicia\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\jammm\Desktop\repositories\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.StudentInfo.resources
+C:\Users\jammm\Desktop\repositories\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.Login.resources
+C:\Users\jammm\Desktop\repositories\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.Menu.resources
+C:\Users\jammm\Desktop\repositories\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.Properties.Resources.resources
+C:\Users\jammm\Desktop\repositories\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.viewInfo.resources
+C:\Users\jammm\Desktop\repositories\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.csproj.GenerateResource.Cache
