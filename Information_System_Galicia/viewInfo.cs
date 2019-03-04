@@ -79,6 +79,7 @@ namespace Information_System_Galicia
             this.Close();
             SI.Show();
             SI.TopMost = true;
-        }
+        }
+
     }
 }

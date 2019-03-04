@@ -206,25 +206,20 @@ namespace Information_System_Galicia
                     this.txtMname.Text = dr.GetString(2);
                     this.txtLname.Text = dr.GetString(3);
                     this.txtAdd.Text = dr.GetString(4);
+
                     string mth = dr.GetString(5).Split(' ')[0];
                     string day = dr.GetString(5).Split(' ')[1];
                     string yr = dr.GetString(5).Split(' ')[2];
+                    this.bdayM.Text = mth; // month combo box text
+                    this.bdayD.Text = day; // day combo box text
+                    this.bdayY.Text = yr; // year combo box text
 
-                    this.bdayM.Text = mth;
-                    this.bdayD.Text = day;
-                    this.bdayY.Text = yr;
-
-
-
-                    //bday
                     this.txtGender.Text = dr.GetString(6);
                     this.txtContact.Text = dr.GetString(7);
                     this.txtEmail.Text = dr.GetString(8);
                     this.txtEmail.ForeColor = Color.Black;
                     this.cmbYr.Text = dr.GetString(9);
                     this.cmbCourse.Text = dr.GetString(10);
-                    //this.cmbCourse.Text = dr.GetString(5);
-                    //this.cmbYear.Text = dr.GetInt32(6).ToString();
                 }
                 connect.Close();
             }
@@ -277,6 +272,11 @@ namespace Information_System_Galicia
                 vv.TopMost = true;
             }
             
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
 
     }
