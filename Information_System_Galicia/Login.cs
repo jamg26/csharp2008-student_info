@@ -127,6 +127,11 @@ namespace Information_System_Galicia
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
             System.Environment.Exit(0);
         }
 

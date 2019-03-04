@@ -74,13 +74,20 @@ namespace Information_System_Galicia
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e) {
-            Login login = new Login();
-            this.Hide();
-            login.Show();
+            //Login login = new Login();
+            //this.Hide();
+            //login.Show();
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e) {
 
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.Show();
         }
     }
 }
