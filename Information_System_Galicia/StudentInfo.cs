@@ -17,7 +17,7 @@ namespace Information_System_Galicia
     {
         SqlConnection connect = dbClass.getConnection();
         viewInfo obj = new viewInfo();
-
+        public string studid;
         public StudentInfo()
         {
             InitializeComponent();
@@ -30,11 +30,11 @@ namespace Information_System_Galicia
 
         private void textBox9_Enter(object sender, EventArgs e)
         {
-            if (textBox9.Text == "SOMEONE@EXAMPLE.COM")
+            if (txtEmail.Text == "SOMEONE@EXAMPLE.COM")
             {
-                textBox9.Text = "";
+                txtEmail.Text = "";
             }
-            textBox9.ForeColor = Color.Black;
+            txtEmail.ForeColor = Color.Black;
         }
 
         private void textBox9_TextChanged(object sender, EventArgs e)
@@ -54,7 +54,7 @@ namespace Information_System_Galicia
                 da.Fill(dt);
                 connect.Open();
                 for (int i = 0; i < dt.Rows.Count; i++) {
-                    courseBox.Items.Add(dt.Rows[i]["CourseName"]);
+                    cmbCourse.Items.Add(dt.Rows[i]["CourseName"]);
                 }
                 connect.Close();
             } catch (Exception ex) {
@@ -65,42 +65,42 @@ namespace Information_System_Galicia
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SmtpClient client = new SmtpClient();
-            client.Port = 587;
-            client.Host = "smtp.gmail.com";
-            client.EnableSsl = true;
-            client.Timeout = 10000;
-            client.DeliveryMethod = SmtpDeliveryMethod.Network;
-            client.UseDefaultCredentials = false;
-            client.Credentials = new System.Net.NetworkCredential("jammmg26@gmail.com", "12261994");
+            //SmtpClient client = new SmtpClient();
+            //client.Port = 587;
+            //client.Host = "smtp.gmail.com";
+            //client.EnableSsl = true;
+            //client.Timeout = 10000;
+            //client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            //client.UseDefaultCredentials = false;
+            //client.Credentials = new System.Net.NetworkCredential("jammmg26@gmail.com", "12261994");
 
-            MailAddress from = new MailAddress("jammmg26@gmail.com", "Student Registration");
-            MailAddress to = new MailAddress(textBox9.Text, textBox2.Text);
-            MailMessage mm = new MailMessage(from, to);
-            mm.Subject = "You have successfully registered";
-            mm.Body = "Hello " + textBox2.Text;
-            mm.BodyEncoding = UTF8Encoding.UTF8;
-            mm.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
+            //MailAddress from = new MailAddress("jammmg26@gmail.com", "Student Registration");
+            //MailAddress to = new MailAddress(textBox9.Text, textBox2.Text);
+            //MailMessage mm = new MailMessage(from, to);
+            //mm.Subject = "You have successfully registered";
+            //mm.Body = "Hello " + textBox2.Text;
+            //mm.BodyEncoding = UTF8Encoding.UTF8;
+            //mm.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
 
-            client.Send(mm);
+            //client.Send(mm);
 
-            string bday = comboBox3.Text + " " + comboBox4.Text + ", " + comboBox5.Text;
+            string bday = bdayM.Text + " " + bdayD.Text + " " + bdayY.Text;
             try
             {
                 SqlDataAdapter sda = new SqlDataAdapter();
                 SqlCommandBuilder cmd = new SqlCommandBuilder(sda);
                 sda.InsertCommand = new SqlCommand("INSERT INTO Student_Info (studentID, FirstName, MiddleName, LastName, Address, BirthDate, Gender, Contact, Email, YearLevel, Course) VALUES (@stud_id, @stud_fname, @stud_mname, @stud_lname, @stud_address, @BirthDate, @Gender, @Contact, @Email, @stud_year, @stud_course)", connect);
-                sda.InsertCommand.Parameters.Add("@stud_id", SqlDbType.VarChar).Value = textBox1.Text;
-                sda.InsertCommand.Parameters.Add("@stud_fname", SqlDbType.VarChar).Value = textBox2.Text;
-                sda.InsertCommand.Parameters.Add("@stud_mname", SqlDbType.VarChar).Value = textBox3.Text;
-                sda.InsertCommand.Parameters.Add("@stud_lname", SqlDbType.VarChar).Value = textBox4.Text;
-                sda.InsertCommand.Parameters.Add("@stud_address", SqlDbType.VarChar).Value = textBox5.Text;
-                sda.InsertCommand.Parameters.Add("@stud_course", SqlDbType.VarChar).Value = courseBox.Text;
-                sda.InsertCommand.Parameters.Add("@stud_year", SqlDbType.VarChar).Value = comboBox1.Text;
+                sda.InsertCommand.Parameters.Add("@stud_id", SqlDbType.VarChar).Value = txtStudId.Text;
+                sda.InsertCommand.Parameters.Add("@stud_fname", SqlDbType.VarChar).Value = txtFname.Text;
+                sda.InsertCommand.Parameters.Add("@stud_mname", SqlDbType.VarChar).Value = txtMname.Text;
+                sda.InsertCommand.Parameters.Add("@stud_lname", SqlDbType.VarChar).Value = txtLname.Text;
+                sda.InsertCommand.Parameters.Add("@stud_address", SqlDbType.VarChar).Value = txtAdd.Text;
+                sda.InsertCommand.Parameters.Add("@stud_course", SqlDbType.VarChar).Value = cmbCourse.Text;
+                sda.InsertCommand.Parameters.Add("@stud_year", SqlDbType.VarChar).Value = cmbYr.Text;
                 sda.InsertCommand.Parameters.Add("@BirthDate", SqlDbType.VarChar).Value = bday;
-                sda.InsertCommand.Parameters.Add("@Gender", SqlDbType.VarChar).Value = comboBox2.Text;
-                sda.InsertCommand.Parameters.Add("@Contact", SqlDbType.VarChar).Value = textBox8.Text;
-                sda.InsertCommand.Parameters.Add("@Email", SqlDbType.VarChar).Value = textBox9.Text;
+                sda.InsertCommand.Parameters.Add("@Gender", SqlDbType.VarChar).Value = txtGender.Text;
+                sda.InsertCommand.Parameters.Add("@Contact", SqlDbType.VarChar).Value = txtContact.Text;
+                sda.InsertCommand.Parameters.Add("@Email", SqlDbType.VarChar).Value = txtEmail.Text;
 
                 connect.Open();
                 sda.InsertCommand.ExecuteNonQuery();
@@ -115,19 +115,19 @@ namespace Information_System_Galicia
             obj.Show();
         }
         void ClearEntry() {
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox3.Text = "";
-            textBox4.Text = "";
-            textBox5.Text = "";
-            textBox8.Text = "";
-            textBox9.Text = "";
-            comboBox1.SelectedIndex = -1;
-            comboBox2.SelectedIndex = -1;
-            comboBox3.SelectedIndex = -1;
-            comboBox4.SelectedIndex = -1;
-            comboBox5.SelectedIndex = -1;
-            courseBox.SelectedIndex = -1;
+            txtStudId.Text = "";
+            txtFname.Text = "";
+            txtMname.Text = "";
+            txtLname.Text = "";
+            txtAdd.Text = "";
+            txtContact.Text = "";
+            txtEmail.Text = "";
+            cmbYr.SelectedIndex = -1;
+            txtGender.SelectedIndex = -1;
+            bdayM.SelectedIndex = -1;
+            bdayD.SelectedIndex = -1;
+            bdayY.SelectedIndex = -1;
+            cmbCourse.SelectedIndex = -1;
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -180,5 +180,57 @@ namespace Information_System_Galicia
         private void StudentInfo_Load(object sender, EventArgs e) {
             course();
         }
+
+        public void searchStudent()
+        {
+            try
+            {
+                connect.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Student_Info WHERE StudentID='" + studid + "'", connect);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    this.txtStudId.Text = dr.GetString(0);
+                    this.txtFname.Text = dr.GetString(1);
+                    this.txtMname.Text = dr.GetString(2);
+                    this.txtLname.Text = dr.GetString(3);
+                    this.txtAdd.Text = dr.GetString(4);
+                    string mth = dr.GetString(5).Split(' ')[0];
+                    string day = dr.GetString(5).Split(' ')[1];
+                    string yr = dr.GetString(5).Split(' ')[2];
+
+                    this.bdayM.Text = mth;
+                    this.bdayD.Text = day;
+                    this.bdayY.Text = yr;
+
+
+
+                    //bday
+                    this.txtGender.Text = dr.GetString(6);
+                    this.txtContact.Text = dr.GetString(7);
+                    this.txtEmail.Text = dr.GetString(8);
+                    this.cmbYr.Text = dr.GetString(9);
+                    this.cmbCourse.Text = dr.GetString(10);
+                    //this.cmbCourse.Text = dr.GetString(5);
+                    //this.cmbYear.Text = dr.GetInt32(6).ToString();
+                }
+                connect.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

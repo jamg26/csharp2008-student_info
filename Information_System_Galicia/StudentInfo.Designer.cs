@@ -28,44 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtStudId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtFname = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtMname = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtLname = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtAdd = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtContact = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cmbYr = new System.Windows.Forms.ComboBox();
+            this.txtGender = new System.Windows.Forms.ComboBox();
+            this.bdayM = new System.Windows.Forms.ComboBox();
+            this.bdayD = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.bdayY = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.courseBox = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cmbCourse = new System.Windows.Forms.ComboBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtStudId
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtStudId.Location = new System.Drawing.Point(6, 34);
+            this.txtStudId.Name = "txtStudId";
+            this.txtStudId.Size = new System.Drawing.Size(121, 20);
+            this.txtStudId.TabIndex = 0;
+            this.txtStudId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -87,14 +89,14 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "FIRST NAME";
             // 
-            // textBox2
+            // txtFname
             // 
-            this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox2.Location = new System.Drawing.Point(6, 35);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(160, 20);
-            this.textBox2.TabIndex = 0;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtFname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtFname.Location = new System.Drawing.Point(6, 35);
+            this.txtFname.Name = "txtFname";
+            this.txtFname.Size = new System.Drawing.Size(160, 20);
+            this.txtFname.TabIndex = 0;
+            this.txtFname.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
             // 
@@ -106,14 +108,14 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "MIDDLE NAME";
             // 
-            // textBox3
+            // txtMname
             // 
-            this.textBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox3.Location = new System.Drawing.Point(172, 35);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(142, 20);
-            this.textBox3.TabIndex = 1;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtMname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtMname.Location = new System.Drawing.Point(172, 35);
+            this.txtMname.Name = "txtMname";
+            this.txtMname.Size = new System.Drawing.Size(142, 20);
+            this.txtMname.TabIndex = 1;
+            this.txtMname.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label4
             // 
@@ -125,14 +127,14 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "LAST NAME";
             // 
-            // textBox4
+            // txtLname
             // 
-            this.textBox4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox4.Location = new System.Drawing.Point(331, 35);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(175, 20);
-            this.textBox4.TabIndex = 2;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.txtLname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtLname.Location = new System.Drawing.Point(331, 35);
+            this.txtLname.Name = "txtLname";
+            this.txtLname.Size = new System.Drawing.Size(175, 20);
+            this.txtLname.TabIndex = 2;
+            this.txtLname.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label5
             // 
@@ -144,14 +146,14 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "ADDRESS";
             // 
-            // textBox5
+            // txtAdd
             // 
-            this.textBox5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox5.Location = new System.Drawing.Point(6, 78);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(500, 20);
-            this.textBox5.TabIndex = 3;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.txtAdd.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtAdd.Location = new System.Drawing.Point(6, 78);
+            this.txtAdd.Name = "txtAdd";
+            this.txtAdd.Size = new System.Drawing.Size(500, 20);
+            this.txtAdd.TabIndex = 3;
+            this.txtAdd.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label6
             // 
@@ -183,12 +185,12 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "CONTACT NUMBER";
             // 
-            // textBox8
+            // txtContact
             // 
-            this.textBox8.Location = new System.Drawing.Point(6, 211);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(160, 20);
-            this.textBox8.TabIndex = 8;
+            this.txtContact.Location = new System.Drawing.Point(6, 211);
+            this.txtContact.Name = "txtContact";
+            this.txtContact.Size = new System.Drawing.Size(160, 20);
+            this.txtContact.TabIndex = 8;
             // 
             // label9
             // 
@@ -200,17 +202,17 @@
             this.label9.TabIndex = 17;
             this.label9.Text = "EMAIL";
             // 
-            // textBox9
+            // txtEmail
             // 
-            this.textBox9.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox9.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.textBox9.Location = new System.Drawing.Point(172, 211);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(227, 20);
-            this.textBox9.TabIndex = 9;
-            this.textBox9.Text = "SOMEONE@EXAMPLE.COM";
-            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
-            this.textBox9.Enter += new System.EventHandler(this.textBox9_Enter);
+            this.txtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtEmail.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtEmail.Location = new System.Drawing.Point(172, 211);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(227, 20);
+            this.txtEmail.TabIndex = 9;
+            this.txtEmail.Text = "SOMEONE@EXAMPLE.COM";
+            this.txtEmail.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
+            this.txtEmail.Enter += new System.EventHandler(this.textBox9_Enter);
             // 
             // label10
             // 
@@ -232,40 +234,40 @@
             this.label11.TabIndex = 19;
             this.label11.Text = "COURSE";
             // 
-            // comboBox1
+            // cmbYr
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbYr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbYr.FormattingEnabled = true;
+            this.cmbYr.Items.AddRange(new object[] {
             "FIRST YEAR",
             "SECOND YEAR",
             "THIRD YEAR",
             "FOURTH YEAR"});
-            this.comboBox1.Location = new System.Drawing.Point(6, 84);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cmbYr.Location = new System.Drawing.Point(6, 84);
+            this.cmbYr.Name = "cmbYr";
+            this.cmbYr.Size = new System.Drawing.Size(121, 21);
+            this.cmbYr.TabIndex = 1;
+            this.cmbYr.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // comboBox2
+            // txtGender
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.txtGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtGender.FormattingEnabled = true;
+            this.txtGender.Items.AddRange(new object[] {
             "MALE",
             "FEMALE",
             "PREFER NOT TO SAY"});
-            this.comboBox2.Location = new System.Drawing.Point(6, 169);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(79, 21);
-            this.comboBox2.TabIndex = 7;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.txtGender.Location = new System.Drawing.Point(6, 169);
+            this.txtGender.Name = "txtGender";
+            this.txtGender.Size = new System.Drawing.Size(79, 21);
+            this.txtGender.TabIndex = 7;
+            this.txtGender.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
-            // comboBox3
+            // bdayM
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.bdayM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.bdayM.FormattingEnabled = true;
+            this.bdayM.Items.AddRange(new object[] {
             "January",
             "February",
             "March",
@@ -278,17 +280,17 @@
             "October",
             "November",
             "December"});
-            this.comboBox3.Location = new System.Drawing.Point(6, 124);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(66, 21);
-            this.comboBox3.TabIndex = 4;
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.bdayM.Location = new System.Drawing.Point(6, 124);
+            this.bdayM.Name = "bdayM";
+            this.bdayM.Size = new System.Drawing.Size(66, 21);
+            this.bdayM.TabIndex = 4;
+            this.bdayM.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
-            // comboBox4
+            // bdayD
             // 
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.bdayD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.bdayD.FormattingEnabled = true;
+            this.bdayD.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -320,30 +322,30 @@
             "29",
             "30",
             "31"});
-            this.comboBox4.Location = new System.Drawing.Point(78, 124);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(66, 21);
-            this.comboBox4.TabIndex = 5;
-            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
+            this.bdayD.Location = new System.Drawing.Point(78, 124);
+            this.bdayD.Name = "bdayD";
+            this.bdayD.Size = new System.Drawing.Size(66, 21);
+            this.bdayD.TabIndex = 5;
+            this.bdayD.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox5);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.comboBox4);
+            this.groupBox1.Controls.Add(this.bdayY);
+            this.groupBox1.Controls.Add(this.txtGender);
+            this.groupBox1.Controls.Add(this.txtFname);
+            this.groupBox1.Controls.Add(this.txtAdd);
+            this.groupBox1.Controls.Add(this.bdayD);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox9);
-            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.txtEmail);
+            this.groupBox1.Controls.Add(this.bdayM);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtContact);
+            this.groupBox1.Controls.Add(this.txtMname);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.txtLname);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -354,11 +356,11 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "BASIC INFORMATION";
             // 
-            // comboBox5
+            // bdayY
             // 
-            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
+            this.bdayY.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.bdayY.FormattingEnabled = true;
+            this.bdayY.Items.AddRange(new object[] {
             "1954",
             "1955",
             "1956",
@@ -415,19 +417,19 @@
             "2007",
             "2008",
             "2009"});
-            this.comboBox5.Location = new System.Drawing.Point(150, 124);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(66, 21);
-            this.comboBox5.TabIndex = 6;
-            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
+            this.bdayY.Location = new System.Drawing.Point(150, 124);
+            this.bdayY.Name = "bdayY";
+            this.bdayY.Size = new System.Drawing.Size(66, 21);
+            this.bdayY.TabIndex = 6;
+            this.bdayY.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.courseBox);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.cmbCourse);
+            this.groupBox2.Controls.Add(this.txtStudId);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.cmbYr);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.groupBox2.Location = new System.Drawing.Point(26, 283);
@@ -437,32 +439,53 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "SCHOOL INFORMATION";
             // 
-            // courseBox
+            // cmbCourse
             // 
-            this.courseBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.courseBox.FormattingEnabled = true;
-            this.courseBox.Location = new System.Drawing.Point(6, 131);
-            this.courseBox.Name = "courseBox";
-            this.courseBox.Size = new System.Drawing.Size(121, 21);
-            this.courseBox.TabIndex = 2;
-            this.courseBox.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
+            this.cmbCourse.FormattingEnabled = true;
+            this.cmbCourse.Location = new System.Drawing.Point(6, 131);
+            this.cmbCourse.Name = "cmbCourse";
+            this.cmbCourse.Size = new System.Drawing.Size(121, 21);
+            this.cmbCourse.TabIndex = 2;
+            this.cmbCourse.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.Location = new System.Drawing.Point(457, 447);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "SAVE";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAdd.Location = new System.Drawing.Point(457, 447);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 27;
+            this.btnAdd.Text = "ADD";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(376, 447);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 28;
+            this.btnUpdate.Text = "UPDATE";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnDel
+            // 
+            this.btnDel.Location = new System.Drawing.Point(295, 447);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(75, 23);
+            this.btnDel.TabIndex = 29;
+            this.btnDel.Text = "DELETE";
+            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // StudentInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(566, 477);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDel);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -481,32 +504,34 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtFname;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtMname;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtLname;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtAdd;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtContact;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cmbYr;
+        private System.Windows.Forms.ComboBox txtGender;
+        private System.Windows.Forms.ComboBox bdayM;
+        private System.Windows.Forms.ComboBox bdayD;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox bdayY;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox courseBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cmbCourse;
+        public System.Windows.Forms.TextBox txtStudId;
+        public System.Windows.Forms.Button btnUpdate;
+        public System.Windows.Forms.Button btnAdd;
+        public System.Windows.Forms.Button btnDel;
     }
 }

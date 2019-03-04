@@ -64,6 +64,19 @@ namespace Information_System_Galicia
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            StudentInfo SI = new StudentInfo();
+            //SI.txtStudId = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            SI.studid = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+
+            SI.txtStudId.Enabled = false;
+            SI.btnAdd.Enabled = false;
+            SI.btnDel.Enabled = false;
+            SI.searchStudent();
+            SI.ShowDialog();
         }
     }
 }
