@@ -183,11 +183,15 @@ namespace Information_System_Galicia
             {
                 course();
                 searchStudent();
+                btnAdd.Hide();
+                btnDel.Hide();
             }
             else { 
                 course();
                 btnDel.Enabled = false;
                 btnUpdate.Enabled = false;
+                btnDel.Hide();
+                btnUpdate.Hide();
             }
             
         }
