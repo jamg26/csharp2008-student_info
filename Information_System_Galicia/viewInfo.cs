@@ -75,8 +75,10 @@ namespace Information_System_Galicia
             SI.txtStudId.Enabled = false;
             SI.btnAdd.Enabled = false;
             SI.btnDel.Enabled = false;
-            SI.searchStudent();
-            SI.ShowDialog();
+            SI.edit = true;
+            this.Close();
+            SI.Show();
+            SI.TopMost = true;
         }
     }
 }

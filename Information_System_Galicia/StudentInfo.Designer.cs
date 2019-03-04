@@ -494,6 +494,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "STUDENT INFORMATION";
             this.Load += new System.EventHandler(this.StudentInfo_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StudentInfo_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

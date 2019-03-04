@@ -16,8 +16,8 @@ namespace Information_System_Galicia
     public partial class StudentInfo : Form
     {
         SqlConnection connect = dbClass.getConnection();
-        viewInfo obj = new viewInfo();
         public string studid;
+        public bool edit;
         public StudentInfo()
         {
             InitializeComponent();
@@ -112,6 +112,7 @@ namespace Information_System_Galicia
                 MessageBox.Show(ex.Message);
             }
             MessageBox.Show("Record is already added!");
+            viewInfo obj = new viewInfo();
             obj.Show();
         }
         void ClearEntry() {
@@ -178,7 +179,17 @@ namespace Information_System_Galicia
         }
 
         private void StudentInfo_Load(object sender, EventArgs e) {
-            course();
+            if (this.edit == true)
+            {
+                course();
+                searchStudent();
+            }
+            else { 
+                course();
+                btnDel.Enabled = false;
+                btnUpdate.Enabled = false;
+            }
+            
         }
 
         public void searchStudent()
@@ -209,6 +220,7 @@ namespace Information_System_Galicia
                     this.txtGender.Text = dr.GetString(6);
                     this.txtContact.Text = dr.GetString(7);
                     this.txtEmail.Text = dr.GetString(8);
+                    this.txtEmail.ForeColor = Color.Black;
                     this.cmbYr.Text = dr.GetString(9);
                     this.cmbCourse.Text = dr.GetString(10);
                     //this.cmbCourse.Text = dr.GetString(5);
@@ -224,12 +236,47 @@ namespace Information_System_Galicia
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            string bday = this.bdayM.Text + " " + this.bdayD.Text + " " + this.bdayY.Text;
+            try {
+                SqlDataAdapter sda = new SqlDataAdapter();
+                SqlCommandBuilder cmd = new SqlCommandBuilder(sda);
 
+                //sda.UpdateCommand = new SqlCommand("UPDATE Student_Info SET FirstName=@stud_fname WHERE StudentID='" + studid + "'", connect);
+                sda.UpdateCommand = new SqlCommand("UPDATE Student_Info SET FirstName=@stud_fname, MiddleName=@stud_mname, LastName=@stud_lname, Address=@stud_address, BirthDate=@BirthDate, Gender=@Gender, Contact=@Contact, Email=@Email, YearLevel=@stud_year, Course=@stud_course WHERE StudentID='" + studid + "'", connect);
+                sda.UpdateCommand.Parameters.Add("@stud_fname", SqlDbType.VarChar).Value = txtFname.Text;
+                sda.UpdateCommand.Parameters.Add("@stud_mname", SqlDbType.VarChar).Value = txtMname.Text;
+                sda.UpdateCommand.Parameters.Add("@stud_lname", SqlDbType.VarChar).Value = txtLname.Text;
+                sda.UpdateCommand.Parameters.Add("@stud_address", SqlDbType.VarChar).Value = txtAdd.Text;
+                sda.UpdateCommand.Parameters.Add("@stud_course", SqlDbType.VarChar).Value = cmbCourse.Text;
+                sda.UpdateCommand.Parameters.Add("@stud_year", SqlDbType.VarChar).Value = cmbYr.Text;
+                sda.UpdateCommand.Parameters.Add("@BirthDate", SqlDbType.VarChar).Value = bday;
+                sda.UpdateCommand.Parameters.Add("@Gender", SqlDbType.VarChar).Value = txtGender.Text;
+                sda.UpdateCommand.Parameters.Add("@Contact", SqlDbType.VarChar).Value = txtContact.Text;
+                sda.UpdateCommand.Parameters.Add("@Email", SqlDbType.VarChar).Value = txtEmail.Text;
+                connect.Open();
+                sda.UpdateCommand.ExecuteNonQuery();
+                connect.Close();
+                MessageBox.Show("Record successfully updated!");
+                this.Close();
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnDel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void StudentInfo_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (this.edit == true) {
+                viewInfo vv = new viewInfo();
+                vv.Show();
+                vv.TopMost = true;
+            }
+            
         }
 
     }
