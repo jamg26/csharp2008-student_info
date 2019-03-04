@@ -125,5 +125,10 @@ namespace Information_System_Galicia
             pictureBox1.Image = Properties.Resources.dino;
         }
 
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            System.Environment.Exit(0);
+        }
+
     }
 }
