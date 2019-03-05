@@ -74,7 +74,6 @@ namespace Information_System_Galicia
 
             SI.txtStudId.Enabled = false;
             SI.btnAdd.Enabled = false;
-            SI.btnDel.Enabled = false;
             SI.edit = true;
             this.Close();
             SI.Show();

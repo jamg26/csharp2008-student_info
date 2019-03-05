@@ -184,7 +184,6 @@ namespace Information_System_Galicia
                 course();
                 searchStudent();
                 btnAdd.Hide();
-                btnDel.Hide();
             }
             else { 
                 course();
@@ -265,7 +264,22 @@ namespace Information_System_Galicia
 
         private void btnDel_Click(object sender, EventArgs e)
         {
+            try
+            {
+                SqlDataAdapter sda = new SqlDataAdapter();
+                SqlCommandBuilder cmd = new SqlCommandBuilder(sda);
+                sda.UpdateCommand = new SqlCommand("DELETE FROM Student_Info WHERE StudentID='" + studid + "'", connect);
 
+                connect.Open();
+                sda.UpdateCommand.ExecuteNonQuery();
+                connect.Close();
+                MessageBox.Show("Record successfully deleted!");
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void StudentInfo_FormClosed(object sender, FormClosedEventArgs e)
