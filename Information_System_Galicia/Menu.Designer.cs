@@ -45,6 +45,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.logoutBtn = new System.Windows.Forms.Button();
             this.lastLog = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.userLogged = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.logoutBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -235,6 +235,17 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Client Information";
             // 
+            // logoutBtn
+            // 
+            this.logoutBtn.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.logoutBtn.Location = new System.Drawing.Point(6, 64);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(75, 23);
+            this.logoutBtn.TabIndex = 4;
+            this.logoutBtn.Text = "Logout";
+            this.logoutBtn.UseVisualStyleBackColor = true;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
+            // 
             // lastLog
             // 
             this.lastLog.AutoSize = true;
@@ -306,17 +317,6 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
-            // 
-            // logoutBtn
-            // 
-            this.logoutBtn.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.logoutBtn.Location = new System.Drawing.Point(6, 64);
-            this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Size = new System.Drawing.Size(75, 23);
-            this.logoutBtn.TabIndex = 4;
-            this.logoutBtn.Text = "Logout";
-            this.logoutBtn.UseVisualStyleBackColor = true;
-            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
             // Menu
             // 

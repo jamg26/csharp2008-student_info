@@ -17,8 +17,6 @@ namespace Information_System_Galicia
         public Menu()
         {
             InitializeComponent();
-            btnRefresh.TabStop = false;
-            logoutBtn.TabStop = false;
         }
 
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
@@ -41,8 +39,9 @@ namespace Information_System_Galicia
         }
         private void Menu_Load(object sender, EventArgs e)
         {
+            btnRefresh.TabStop = false;
+            logoutBtn.TabStop = false;
             getStudentsInfo();
-
         }
 
         public void getStudentsInfo() {
