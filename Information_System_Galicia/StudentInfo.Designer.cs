@@ -293,7 +293,7 @@
             "December"});
             this.bdayM.Location = new System.Drawing.Point(6, 124);
             this.bdayM.Name = "bdayM";
-            this.bdayM.Size = new System.Drawing.Size(66, 21);
+            this.bdayM.Size = new System.Drawing.Size(89, 21);
             this.bdayM.TabIndex = 4;
             this.bdayM.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
@@ -333,9 +333,9 @@
             "29",
             "30",
             "31"});
-            this.bdayD.Location = new System.Drawing.Point(78, 124);
+            this.bdayD.Location = new System.Drawing.Point(101, 124);
             this.bdayD.Name = "bdayD";
-            this.bdayD.Size = new System.Drawing.Size(66, 21);
+            this.bdayD.Size = new System.Drawing.Size(53, 21);
             this.bdayD.TabIndex = 5;
             this.bdayD.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
@@ -430,7 +430,7 @@
             "2007",
             "2008",
             "2009"});
-            this.bdayY.Location = new System.Drawing.Point(150, 124);
+            this.bdayY.Location = new System.Drawing.Point(160, 124);
             this.bdayY.Name = "bdayY";
             this.bdayY.Size = new System.Drawing.Size(66, 21);
             this.bdayY.TabIndex = 6;
@@ -455,6 +455,7 @@
             // 
             // cmbCourse
             // 
+            this.cmbCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCourse.FormattingEnabled = true;
             this.cmbCourse.Location = new System.Drawing.Point(6, 131);
             this.cmbCourse.Name = "cmbCourse";
@@ -543,10 +544,10 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox bdayY;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox cmbCourse;
         public System.Windows.Forms.TextBox txtStudId;
         public System.Windows.Forms.Button btnUpdate;
         public System.Windows.Forms.Button btnAdd;
         public System.Windows.Forms.Button btnDel;
+        public System.Windows.Forms.ComboBox cmbCourse;
     }
 }

@@ -62,7 +62,7 @@ namespace Information_System_Galicia
             }
             else
             {
-                pictureBox1.Image = Properties.Resources.dinogameover;
+                //pictureBox1.Image = Properties.Resources.dinogameover;
                 MessageBox.Show("Access Denied!");
                 textBox2.Clear();
                 textBox1.Clear();
@@ -122,7 +122,7 @@ namespace Information_System_Galicia
         }
 
         private void textBox2_KeyDown(object sender, KeyEventArgs e) {
-            pictureBox1.Image = Properties.Resources.dino;
+            //pictureBox1.Image = Properties.Resources.dino;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
