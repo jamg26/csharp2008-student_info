@@ -127,6 +127,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ico.ico" />
+    <None Include="Resources\jamg.ico" />
     <None Include="Resources\dinogameover.png" />
     <None Include="Resources\dino.gif" />
   </ItemGroup>

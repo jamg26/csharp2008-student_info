@@ -53,7 +53,7 @@
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.label3 = new System.Windows.Forms.Label();
+            this.logoutBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -72,7 +72,7 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Window;
             this.groupBox1.Location = new System.Drawing.Point(13, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(329, 92);
+            this.groupBox1.Size = new System.Drawing.Size(244, 92);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Summary";
@@ -81,7 +81,7 @@
             // btnRefresh
             // 
             this.btnRefresh.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnRefresh.Location = new System.Drawing.Point(248, 63);
+            this.btnRefresh.Location = new System.Drawing.Point(163, 63);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 23);
             this.btnRefresh.TabIndex = 6;
@@ -158,7 +158,7 @@
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Window;
             this.groupBox2.Location = new System.Drawing.Point(13, 126);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(600, 105);
+            this.groupBox2.Size = new System.Drawing.Size(515, 105);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Database";
@@ -222,12 +222,13 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.logoutBtn);
             this.groupBox3.Controls.Add(this.lastLog);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.userLogged);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.groupBox3.Location = new System.Drawing.Point(348, 28);
+            this.groupBox3.Location = new System.Drawing.Point(263, 27);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(265, 92);
             this.groupBox3.TabIndex = 3;
@@ -256,7 +257,7 @@
             // userLogged
             // 
             this.userLogged.AutoSize = true;
-            this.userLogged.Location = new System.Drawing.Point(45, 20);
+            this.userLogged.Location = new System.Drawing.Point(83, 20);
             this.userLogged.Name = "userLogged";
             this.userLogged.Size = new System.Drawing.Size(10, 13);
             this.userLogged.TabIndex = 1;
@@ -268,9 +269,9 @@
             this.label13.ForeColor = System.Drawing.SystemColors.Window;
             this.label13.Location = new System.Drawing.Point(7, 20);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(32, 13);
+            this.label13.Size = new System.Drawing.Size(71, 13);
             this.label13.TabIndex = 0;
-            this.label13.Text = "User:";
+            this.label13.Text = "User Logged:";
             // 
             // fileToolStripMenuItem
             // 
@@ -301,31 +302,28 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(627, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(540, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
-            // label3
+            // logoutBtn
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Snow;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(551, 4);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 20);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "LOGOUT";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.logoutBtn.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.logoutBtn.Location = new System.Drawing.Point(6, 64);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(75, 23);
+            this.logoutBtn.TabIndex = 4;
+            this.logoutBtn.Text = "Logout";
+            this.logoutBtn.UseVisualStyleBackColor = true;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(627, 242);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(540, 240);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -376,6 +374,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label lastLog;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button logoutBtn;
     }
 }

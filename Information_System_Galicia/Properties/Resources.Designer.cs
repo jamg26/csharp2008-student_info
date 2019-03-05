@@ -81,6 +81,13 @@ namespace Information_System_Galicia.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap jamg {
+            get {
+                object obj = ResourceManager.GetObject("jamg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap key {
             get {
                 object obj = ResourceManager.GetObject("key", resourceCulture);

@@ -18,6 +18,7 @@ namespace Information_System_Galicia
         SqlConnection connect = dbClass.getConnection();
         public string studid;
         public bool edit;
+        public int id_inc;
         public StudentInfo()
         {
             InitializeComponent();
@@ -101,22 +102,26 @@ namespace Information_System_Galicia
                 sda.InsertCommand.Parameters.Add("@Gender", SqlDbType.VarChar).Value = txtGender.Text;
                 sda.InsertCommand.Parameters.Add("@Contact", SqlDbType.VarChar).Value = txtContact.Text;
                 sda.InsertCommand.Parameters.Add("@Email", SqlDbType.VarChar).Value = txtEmail.Text;
-
                 connect.Open();
                 sda.InsertCommand.ExecuteNonQuery();
                 connect.Close();
                 ClearEntry();
+                SqlDataAdapter da = new SqlDataAdapter();
+                da.UpdateCommand = new SqlCommand("UPDATE id_increment SET ID = " + (id_inc + 1) + " WHERE ID = " + id_inc, connect);
+                connect.Open();
+                da.UpdateCommand.ExecuteNonQuery();
+                connect.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            MessageBox.Show("Record is already added!");
+            this.Close();
             viewInfo obj = new viewInfo();
             obj.Show();
+            MessageBox.Show("Record is already added!");
         }
         void ClearEntry() {
-            txtStudId.Text = "";
             txtFname.Text = "";
             txtMname.Text = "";
             txtLname.Text = "";
@@ -268,7 +273,6 @@ namespace Information_System_Galicia
                 SqlDataAdapter sda = new SqlDataAdapter();
                 SqlCommandBuilder cmd = new SqlCommandBuilder(sda);
 
-                //sda.UpdateCommand = new SqlCommand("UPDATE Student_Info SET FirstName=@stud_fname WHERE StudentID='" + studid + "'", connect);
                 sda.UpdateCommand = new SqlCommand("UPDATE Student_Info SET FirstName=@stud_fname, MiddleName=@stud_mname, LastName=@stud_lname, Address=@stud_address, BirthDate=@BirthDate, Gender=@Gender, Contact=@Contact, Email=@Email, YearLevel=@stud_year, Course=@stud_course WHERE StudentID='" + studid + "'", connect);
                 sda.UpdateCommand.Parameters.Add("@stud_fname", SqlDbType.VarChar).Value = txtFname.Text;
                 sda.UpdateCommand.Parameters.Add("@stud_mname", SqlDbType.VarChar).Value = txtMname.Text;
@@ -283,8 +287,8 @@ namespace Information_System_Galicia
                 connect.Open();
                 sda.UpdateCommand.ExecuteNonQuery();
                 connect.Close();
-                MessageBox.Show("Record successfully updated!");
                 this.Close();
+                MessageBox.Show("Record successfully updated!");
             }
             catch (Exception ex) {
                 MessageBox.Show(ex.Message);
@@ -302,8 +306,9 @@ namespace Information_System_Galicia
                 connect.Open();
                 sda.UpdateCommand.ExecuteNonQuery();
                 connect.Close();
-                MessageBox.Show("Record successfully deleted!");
                 this.Close();
+                MessageBox.Show("Record successfully deleted!");
+                
             }
             catch (Exception ex)
             {

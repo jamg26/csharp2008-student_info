@@ -21,6 +21,7 @@ namespace Information_System_Galicia
         private void viewInfo_Load(object sender, EventArgs e)
         {
             displayInformation();
+            dataGridView1.Sort(dataGridView1.Columns[0], ListSortDirection.Ascending);
         }
 
         public void displayInformation()

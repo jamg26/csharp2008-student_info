@@ -35,6 +35,7 @@ namespace Information_System_Galicia
 
         private void button1_Click(object sender, EventArgs e)
         {
+            button1.Hide();
             conn.Open();
             SqlCommand cmd = new SqlCommand("SELECT *FROM security WHERE username = '" + textBox2.Text + "' AND password = '" + textBox1.Text + "'", conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -67,6 +68,7 @@ namespace Information_System_Galicia
                 textBox2.Clear();
                 textBox1.Clear();
                 textBox2.Focus();
+                button1.Show();
             }
 
         }
@@ -133,6 +135,21 @@ namespace Information_System_Galicia
         private void label3_Click(object sender, EventArgs e)
         {
             System.Environment.Exit(0);
+        }
+
+        private void label3_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_MouseEnter(object sender, EventArgs e)
+        {
+            label3.Font = new Font(label3.Font, FontStyle.Bold);
+        }
+
+        private void label3_MouseLeave(object sender, EventArgs e)
+        {
+            label3.Font = new Font(label3.Font, FontStyle.Regular);
         }
 
     }

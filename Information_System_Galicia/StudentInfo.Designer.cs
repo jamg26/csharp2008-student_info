@@ -63,6 +63,7 @@
             // 
             // txtStudId
             // 
+            this.txtStudId.Enabled = false;
             this.txtStudId.Location = new System.Drawing.Point(6, 34);
             this.txtStudId.Name = "txtStudId";
             this.txtStudId.Size = new System.Drawing.Size(121, 20);

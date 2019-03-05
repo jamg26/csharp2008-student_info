@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Data.SqlTypes;
 
 namespace Information_System_Galicia
 {
@@ -16,14 +17,28 @@ namespace Information_System_Galicia
         public Menu()
         {
             InitializeComponent();
+            btnRefresh.TabStop = false;
+            logoutBtn.TabStop = false;
         }
 
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            inc_id();
+        }
+        public void inc_id() {
             StudentInfo add = new StudentInfo();
+            DateTime dt = new DateTime(2019, 07, 28);
+            conn.Open();
+            SqlCommand sda = new SqlCommand("SELECT ID FROM id_increment", conn);
+            SqlDataReader dr = sda.ExecuteReader();
+            if (dr.Read())
+            {
+                add.txtStudId.Text = dt.ToString("yy") + "-" + dr.GetInt32(0);
+            }
+            add.id_inc = dr.GetInt32(0);
+            conn.Close();
             add.Show();
         }
-
         private void Menu_Load(object sender, EventArgs e)
         {
             getStudentsInfo();
@@ -84,6 +99,14 @@ namespace Information_System_Galicia
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.Show();
+        }
+
+
+        private void logoutBtn_Click(object sender, EventArgs e)
         {
             Login login = new Login();
             this.Hide();
