@@ -23,6 +23,7 @@ namespace Information_System_Galicia
         {
             displayInformation();
             dataGridView1.Sort(dataGridView1.Columns[0], ListSortDirection.Ascending);
+
             
         }
 
@@ -35,6 +36,17 @@ namespace Information_System_Galicia
                      SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Student_Info", conn);
                      sda.Fill(dt);
                      dataGridView1.DataSource = dt;
+                     dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                     dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                     dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                     dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                     dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                     dataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                     dataGridView1.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                     dataGridView1.Columns[7].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                     dataGridView1.Columns[8].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                     dataGridView1.Columns[9].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                     dataGridView1.Columns[10].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                      //dataGridView1.Columns[0].Width = 100;
                      //dataGridView1.Columns[1].Width = 100;
                      //dataGridView1.Columns[2].Width = 100;

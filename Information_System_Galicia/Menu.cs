@@ -14,7 +14,7 @@ namespace Information_System_Galicia
     public partial class Menu : Form
     {
         SqlConnection conn = dbClass.getConnection();
-        public bool isAdmin;
+        
         public Menu()
         {
             InitializeComponent();
@@ -38,18 +38,43 @@ namespace Information_System_Galicia
             conn.Close();
             add.Show();
         }
-        private void Menu_Load(object sender, EventArgs e)
+        public void getUserCount()
         {
+            SqlCommand sda = new SqlCommand("SELECT COUNT(id) FROM security", conn);
             conn.Open();
-            SqlCommand cmd = new SqlCommand("SELECT userLogged FROM session", conn);
-            SqlDataReader dr = cmd.ExecuteReader();
+            SqlDataReader dr = sda.ExecuteReader();
             if (dr.Read())
             {
-                MessageBox.Show(dr.GetString(0));
+                userCount.Text = Convert.ToString(dr.GetInt32(0));
             }
             conn.Close();
-            btnRefresh.TabStop = false;
-            logoutBtn.TabStop = false;
+        }
+        public void getCourseCount()
+        {
+            SqlCommand sda = new SqlCommand("SELECT COUNT(CourseID) FROM Course", conn);
+            conn.Open();
+            SqlDataReader dr = sda.ExecuteReader();
+            if (dr.Read())
+            {
+                courseCount.Text = Convert.ToString(dr.GetInt32(0));
+            }
+            conn.Close();
+        }
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            getUserCount();
+            getCourseCount();
+            addToolStripMenuItem.Enabled = false;
+            courseAdd.Enabled = false;
+            usersToolStripMenuItem.Visible = false;
+            Permission permission = new Permission();
+            if (permission.GetPermission() == "admin")
+            {
+                addToolStripMenuItem.Enabled = true;
+                usersToolStripMenuItem.Visible = true;
+                courseAdd.Enabled = true;
+            }
+
             getStudentsInfo();
 
 
@@ -75,6 +100,9 @@ namespace Information_System_Galicia
 
 
             conn.Close();
+
+            getUserCount();
+            getCourseCount();
 
         }
 
@@ -132,6 +160,67 @@ namespace Information_System_Galicia
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void courseAdd_Click(object sender, EventArgs e)
+        {
+            CourseAdd course = new CourseAdd();
+            course.Show();
+        }
+
+        private void courseView_Click(object sender, EventArgs e)
+        {
+            CourseView course = new CourseView();
+            course.Show();
+        }
+
+        private void addToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            UsersAdd user = new UsersAdd();
+            user.Show();
+        }
+
+        private void viewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UserView user = new UserView();
+            user.Show();
+        }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            getStudentsInfo();
+        }
+
+        private void logoutToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.Show();
+        }
+
+        private void refreshToolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            refreshToolStripMenuItem.ForeColor = Color.Teal;
+        }
+
+        private void refreshToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            refreshToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void logoutToolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            logoutToolStripMenuItem.ForeColor = Color.Red;
+        }
+
+        private void logoutToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            logoutToolStripMenuItem.ForeColor = Color.Black;
         }
     }
 }

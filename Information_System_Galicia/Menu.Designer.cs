@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.countFemale = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.countMale = new System.Windows.Forms.Label();
@@ -45,7 +44,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.logoutBtn = new System.Windows.Forms.Button();
+            this.txtUserType = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.lastLog = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.userLogged = new System.Windows.Forms.Label();
@@ -54,15 +54,30 @@
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.courseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.courseAdd = new System.Windows.Forms.ToolStripMenuItem();
+            this.courseView = new System.Windows.Forms.ToolStripMenuItem();
+            this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.courseCount = new System.Windows.Forms.Label();
+            this.userCount = new System.Windows.Forms.Label();
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnRefresh);
             this.groupBox1.Controls.Add(this.countFemale);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.countMale);
@@ -75,19 +90,8 @@
             this.groupBox1.Size = new System.Drawing.Size(244, 92);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Student Summary";
+            this.groupBox1.Text = "Student Stats";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnRefresh.Location = new System.Drawing.Point(163, 63);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
-            this.btnRefresh.TabIndex = 6;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // countFemale
             // 
@@ -156,7 +160,7 @@
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Window;
-            this.groupBox2.Location = new System.Drawing.Point(13, 126);
+            this.groupBox2.Location = new System.Drawing.Point(13, 218);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(515, 105);
             this.groupBox2.TabIndex = 2;
@@ -223,7 +227,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.logoutBtn);
+            this.groupBox3.Controls.Add(this.txtUserType);
+            this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.lastLog);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.userLogged);
@@ -237,16 +242,24 @@
             this.groupBox3.Text = "Client Information";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
-            // logoutBtn
+            // txtUserType
             // 
-            this.logoutBtn.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.logoutBtn.Location = new System.Drawing.Point(6, 64);
-            this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Size = new System.Drawing.Size(75, 23);
-            this.logoutBtn.TabIndex = 4;
-            this.logoutBtn.Text = "Logout";
-            this.logoutBtn.UseVisualStyleBackColor = true;
-            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
+            this.txtUserType.AutoSize = true;
+            this.txtUserType.Location = new System.Drawing.Point(83, 63);
+            this.txtUserType.Name = "txtUserType";
+            this.txtUserType.Size = new System.Drawing.Size(10, 13);
+            this.txtUserType.TabIndex = 6;
+            this.txtUserType.Text = "-";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 63);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Permission:";
+            this.label3.Click += new System.EventHandler(this.label3_Click_1);
             // 
             // lastLog
             // 
@@ -292,27 +305,31 @@
             this.addToolStripMenuItem,
             this.viewInformationToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.fileToolStripMenuItem.Text = "Students";
             // 
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.addToolStripMenuItem.Text = "Add";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // viewInformationToolStripMenuItem
             // 
             this.viewInformationToolStripMenuItem.Name = "viewInformationToolStripMenuItem";
-            this.viewInformationToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.viewInformationToolStripMenuItem.Text = "View Information";
+            this.viewInformationToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.viewInformationToolStripMenuItem.Text = "View";
             this.viewInformationToolStripMenuItem.Click += new System.EventHandler(this.viewInformationToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
+            this.fileToolStripMenuItem,
+            this.courseToolStripMenuItem,
+            this.usersToolStripMenuItem,
+            this.refreshToolStripMenuItem,
+            this.logoutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(540, 24);
@@ -320,12 +337,138 @@
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
+            // courseToolStripMenuItem
+            // 
+            this.courseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.courseAdd,
+            this.courseView});
+            this.courseToolStripMenuItem.Name = "courseToolStripMenuItem";
+            this.courseToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.courseToolStripMenuItem.Text = "Course";
+            // 
+            // courseAdd
+            // 
+            this.courseAdd.Name = "courseAdd";
+            this.courseAdd.Size = new System.Drawing.Size(152, 22);
+            this.courseAdd.Text = "Add";
+            this.courseAdd.Click += new System.EventHandler(this.courseAdd_Click);
+            // 
+            // courseView
+            // 
+            this.courseView.Name = "courseView";
+            this.courseView.Size = new System.Drawing.Size(152, 22);
+            this.courseView.Text = "View";
+            this.courseView.Click += new System.EventHandler(this.courseView_Click);
+            // 
+            // usersToolStripMenuItem
+            // 
+            this.usersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addToolStripMenuItem1,
+            this.viewToolStripMenuItem});
+            this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
+            this.usersToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.usersToolStripMenuItem.Text = "Users";
+            // 
+            // addToolStripMenuItem1
+            // 
+            this.addToolStripMenuItem1.Name = "addToolStripMenuItem1";
+            this.addToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.addToolStripMenuItem1.Text = "Add";
+            this.addToolStripMenuItem1.Click += new System.EventHandler(this.addToolStripMenuItem1_Click);
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.viewToolStripMenuItem.Text = "View";
+            this.viewToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.courseCount);
+            this.groupBox4.Controls.Add(this.label5);
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox4.Location = new System.Drawing.Point(13, 126);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(244, 86);
+            this.groupBox4.TabIndex = 4;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Course Stats";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.userCount);
+            this.groupBox5.Controls.Add(this.label10);
+            this.groupBox5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox5.Location = new System.Drawing.Point(263, 126);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(265, 86);
+            this.groupBox5.TabIndex = 4;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "User Stats";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(10, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Course Count:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(10, 19);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(63, 13);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "User Count:";
+            // 
+            // courseCount
+            // 
+            this.courseCount.AutoSize = true;
+            this.courseCount.Location = new System.Drawing.Point(91, 20);
+            this.courseCount.Name = "courseCount";
+            this.courseCount.Size = new System.Drawing.Size(10, 13);
+            this.courseCount.TabIndex = 1;
+            this.courseCount.Text = "-";
+            // 
+            // userCount
+            // 
+            this.userCount.AutoSize = true;
+            this.userCount.Location = new System.Drawing.Point(83, 20);
+            this.userCount.Name = "userCount";
+            this.userCount.Size = new System.Drawing.Size(10, 13);
+            this.userCount.TabIndex = 1;
+            this.userCount.Text = "-";
+            // 
+            // refreshToolStripMenuItem
+            // 
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.refreshToolStripMenuItem.Text = "Refresh";
+            this.refreshToolStripMenuItem.MouseLeave += new System.EventHandler(this.refreshToolStripMenuItem_MouseLeave);
+            this.refreshToolStripMenuItem.MouseEnter += new System.EventHandler(this.refreshToolStripMenuItem_MouseEnter);
+            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.MouseLeave += new System.EventHandler(this.logoutToolStripMenuItem_MouseLeave);
+            this.logoutToolStripMenuItem.MouseEnter += new System.EventHandler(this.logoutToolStripMenuItem_MouseEnter);
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click_1);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(540, 240);
+            this.ClientSize = new System.Drawing.Size(540, 334);
+            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -345,6 +488,10 @@
             this.groupBox3.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -369,13 +516,27 @@
         public System.Windows.Forms.Label dbName;
         public System.Windows.Forms.Label dbUser;
         public System.Windows.Forms.Label dbServer;
-        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewInformationToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label lastLog;
-        private System.Windows.Forms.Button logoutBtn;
+        private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label txtUserType;
+        private System.Windows.Forms.ToolStripMenuItem courseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem courseAdd;
+        private System.Windows.Forms.ToolStripMenuItem courseView;
+        private System.Windows.Forms.ToolStripMenuItem usersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label courseCount;
+        public System.Windows.Forms.Label userCount;
+        private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
     }
 }

@@ -54,28 +54,18 @@ namespace Information_System_Galicia
                 dbClass db = new dbClass();
                 Menu mm = new Menu();
 
+                Permission permission = new Permission();
                 if (dr.Read())
                 {
                     this.perm = dr.GetString(0);
                     conn.Close();
                     if (this.perm == "admin")
                     {
-                        mm.isAdmin = true;
-                        
-                        SqlDataAdapter sd = new SqlDataAdapter();
-                        sd.UpdateCommand = new SqlCommand("UPDATE session SET userLogged='" + this.perm + "' WHERE id=1", conn);
-                        conn.Open();
-                        sd.UpdateCommand.ExecuteNonQuery();
-                        conn.Close();
+                        permission.UpdatePermission(this.perm);
                     }
                     else
                     {
-                        mm.isAdmin = false;
-                        SqlDataAdapter sf = new SqlDataAdapter();
-                        sf.UpdateCommand = new SqlCommand("UPDATE session SET userLogged='" + this.perm + "' WHERE id=1", conn);
-                        conn.Open();
-                        sf.UpdateCommand.ExecuteNonQuery();
-                        conn.Close();
+                        permission.UpdatePermission(this.perm);
                     }
                 }
                 
@@ -89,7 +79,7 @@ namespace Information_System_Galicia
                 mm.dbName.Text = db.dbN;
                 mm.dbUser.Text = db.dbU;
                 mm.lastLog.Text = dtime.ToString("MM/dd/yyyy h:mm tt");
-
+                mm.txtUserType.Text = this.perm;
                 mm.userLogged.Text = textBox2.Text;
                 mm.Show();
                 

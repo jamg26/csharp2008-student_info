@@ -49,6 +49,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CourseAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseAdd.Designer.cs">
+      <DependentUpon>CourseAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseView.Designer.cs">
+      <DependentUpon>CourseView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Permission.cs" />
     <Compile Include="StudentInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +83,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CourseAdd.resx">
+      <DependentUpon>CourseAdd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseView.resx">
+      <DependentUpon>CourseView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentInfo.resx">
       <DependentUpon>StudentInfo.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -85,6 +106,14 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersAdd.resx">
+      <DependentUpon>UsersAdd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserView.resx">
+      <DependentUpon>UserView.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="viewInfo.resx">
@@ -105,6 +134,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UsersAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersAdd.Designer.cs">
+      <DependentUpon>UsersAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserView.Designer.cs">
+      <DependentUpon>UserView.cs</DependentUpon>
     </Compile>
     <Compile Include="viewInfo.cs">
       <SubType>Form</SubType>

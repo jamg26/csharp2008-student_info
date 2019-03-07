@@ -184,18 +184,19 @@ namespace Information_System_Galicia
         }
 
         private void StudentInfo_Load(object sender, EventArgs e) {
-            //permission user = new permission();
-            //if (user.isAdmin == "false")
-            //{
-            //    this.btnAdd.Hide();
-            //    this.btnDel.Hide();
-            //    this.btnUpdate.Hide();
-            //}
-            //else {
-            //    this.btnAdd.Show();
-            //    this.btnDel.Show();
-            //    this.btnUpdate.Show();
-            //}
+            btnDel.Enabled = false;
+            btnUpdate.Enabled = false;
+            btnAdd.Enabled = false;
+            groupBox1.Enabled = false;
+            groupBox2.Enabled = false;
+            Permission perm = new Permission();
+            if (perm.GetPermission() == "admin") {
+                btnDel.Enabled = true;
+                btnUpdate.Enabled = true;
+                btnAdd.Enabled = true;
+                groupBox1.Enabled = true;
+                groupBox2.Enabled = true;
+            }
             if (this.edit == true)
             {
                 course();
