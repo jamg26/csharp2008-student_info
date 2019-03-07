@@ -214,10 +214,10 @@ namespace Information_System_Galicia
                     this.txtMname.Text = dr.GetString(2);
                     this.txtLname.Text = dr.GetString(3);
                     this.txtAdd.Text = dr.GetString(4);
-                    var date = dr.GetString(5).Split(' ');
-                    string mth = date[0];
-                    string day = date[1];
-                    string yr = date[2];
+
+                    string mth = dr.GetString(5).Split(' ')[0];
+                    string day = dr.GetString(5).Split(' ')[1];
+                    string yr = dr.GetString(5).Split(' ')[2];
                     this.bdayM.Text = mth; // month combo box text
                     this.bdayD.Text = day; // day combo box text
                     this.bdayY.Text = yr; // year combo box text
