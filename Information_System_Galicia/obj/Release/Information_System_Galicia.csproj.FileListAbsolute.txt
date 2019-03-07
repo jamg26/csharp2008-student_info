@@ -19,3 +19,7 @@ C:\Users\jammm\Desktop\repositories\Information_System_Galicia\Information_Syste
 C:\Users\jammm\Desktop\repositories\Information_System_Galicia\Information_System_Galicia\obj\Release\Information_System_Galicia.Properties.Resources.resources
 C:\Users\jammm\Desktop\repositories\Information_System_Galicia\Information_System_Galicia\obj\Release\Information_System_Galicia.viewInfo.resources
 C:\Users\jammm\Desktop\repositories\Information_System_Galicia\Information_System_Galicia\obj\Release\Information_System_Galicia.csproj.GenerateResource.Cache
+C:\Users\jammm\Desktop\repositories\Information_System_Galicia\Information_System_Galicia\obj\Release\Information_System_Galicia.CourseAdd.resources
+C:\Users\jammm\Desktop\repositories\Information_System_Galicia\Information_System_Galicia\obj\Release\Information_System_Galicia.CourseView.resources
+C:\Users\jammm\Desktop\repositories\Information_System_Galicia\Information_System_Galicia\obj\Release\Information_System_Galicia.UsersAdd.resources
+C:\Users\jammm\Desktop\repositories\Information_System_Galicia\Information_System_Galicia\obj\Release\Information_System_Galicia.UserView.resources
