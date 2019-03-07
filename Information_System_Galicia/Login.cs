@@ -16,6 +16,7 @@ namespace Information_System_Galicia
     public partial class Login : Form
     {
         SqlConnection conn = dbClass.getConnection();
+        public string perm;
         public Login()
         {
             InitializeComponent();
@@ -37,19 +38,51 @@ namespace Information_System_Galicia
         {
             button1.Hide();
             conn.Open();
-            SqlCommand cmd = new SqlCommand("SELECT *FROM security WHERE username = '" + textBox2.Text + "' AND password = '" + textBox1.Text + "'", conn);
+            SqlCommand cmd = new SqlCommand("SELECT type FROM security WHERE username = '" + textBox2.Text + "' AND password = '" + textBox1.Text + "'", conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             conn.Close();
             if (dt.Rows.Count > 0)
             {
+                conn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
                 //MessageBox.Show("Access Granted!");
                 this.Hide();
                 //MainMenu mm = new MainMenu();
                 //mm.Show();
                 dbClass db = new dbClass();
                 Menu mm = new Menu();
+
+                if (dr.Read())
+                {
+                    this.perm = dr.GetString(0);
+                    conn.Close();
+                    if (this.perm == "admin")
+                    {
+                        mm.isAdmin = true;
+                        
+                        SqlDataAdapter sd = new SqlDataAdapter();
+                        sd.UpdateCommand = new SqlCommand("UPDATE session SET userLogged='" + this.perm + "' WHERE id=1", conn);
+                        conn.Open();
+                        sd.UpdateCommand.ExecuteNonQuery();
+                        conn.Close();
+                    }
+                    else
+                    {
+                        mm.isAdmin = false;
+                        SqlDataAdapter sf = new SqlDataAdapter();
+                        sf.UpdateCommand = new SqlCommand("UPDATE session SET userLogged='" + this.perm + "' WHERE id=1", conn);
+                        conn.Open();
+                        sf.UpdateCommand.ExecuteNonQuery();
+                        conn.Close();
+                    }
+                }
+                
+
+                
+
+
                 DateTime dtime = DateTime.Now;
 
                 mm.dbServer.Text = db.dbS;

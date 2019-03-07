@@ -14,6 +14,7 @@ namespace Information_System_Galicia
     public partial class Menu : Form
     {
         SqlConnection conn = dbClass.getConnection();
+        public bool isAdmin;
         public Menu()
         {
             InitializeComponent();
@@ -39,9 +40,20 @@ namespace Information_System_Galicia
         }
         private void Menu_Load(object sender, EventArgs e)
         {
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("SELECT userLogged FROM session", conn);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                MessageBox.Show(dr.GetString(0));
+            }
+            conn.Close();
             btnRefresh.TabStop = false;
             logoutBtn.TabStop = false;
             getStudentsInfo();
+
+
+
         }
 
         public void getStudentsInfo() {
@@ -110,6 +122,16 @@ namespace Information_System_Galicia
             Login login = new Login();
             this.Hide();
             login.Show();
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -13,6 +13,7 @@ namespace Information_System_Galicia
     public partial class viewInfo : Form
     {
         SqlConnection conn = dbClass.getConnection();
+        public bool isAdmin;
         public viewInfo()
         {
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace Information_System_Galicia
         {
             displayInformation();
             dataGridView1.Sort(dataGridView1.Columns[0], ListSortDirection.Ascending);
+            
         }
 
         public void displayInformation()
