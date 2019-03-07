@@ -162,6 +162,7 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Database";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // dbName
             // 
@@ -234,6 +235,7 @@
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Client Information";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // logoutBtn
             // 
