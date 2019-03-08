@@ -10,23 +10,18 @@ using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Net.Mail;
 
-namespace Information_System_Galicia
-{
-    public partial class StudentInfo : Form
-    {
+namespace Information_System_Galicia {
+    public partial class StudentInfo : Form {
         SqlConnection connect = dbClass.getConnection();
         public string studid;
         public bool edit;
         public int id_inc;
-        public StudentInfo()
-        {
+        public StudentInfo() {
             InitializeComponent();
         }
 
-        private void textBox9_Enter(object sender, EventArgs e)
-        {
-            if (txtEmail.Text == "SOMEONE@EXAMPLE.COM")
-            {
+        private void textBox9_Enter(object sender, EventArgs e) {
+            if (txtEmail.Text == "SOMEONE@EXAMPLE.COM") {
                 txtEmail.Text = "";
             }
             txtEmail.ForeColor = Color.Black;
@@ -47,8 +42,7 @@ namespace Information_System_Galicia
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+        private void button1_Click(object sender, EventArgs e) {
             //SmtpClient client = new SmtpClient();
             //client.Port = 587;
             //client.Host = "smtp.gmail.com";
@@ -69,8 +63,7 @@ namespace Information_System_Galicia
             //client.Send(mm);
 
             string bday = bdayM.Text + " " + bdayD.Text + " " + bdayY.Text;
-            try
-            {
+            try {
                 SqlDataAdapter sda = new SqlDataAdapter();
                 SqlCommandBuilder cmd = new SqlCommandBuilder(sda);
                 sda.InsertCommand = new SqlCommand("INSERT INTO Student_Info (studentID, FirstName, MiddleName, LastName, Address, BirthDate, Gender, Contact, Email, YearLevel, Course) VALUES (@stud_id, @stud_fname, @stud_mname, @stud_lname, @stud_address, @BirthDate, @Gender, @Contact, @Email, @stud_year, @stud_course)", connect);
@@ -95,9 +88,7 @@ namespace Information_System_Galicia
                 connect.Open();
                 da.UpdateCommand.ExecuteNonQuery();
                 connect.Close();
-            }
-            catch (Exception ex)
-            {
+            } catch (Exception ex) {
                 MessageBox.Show(ex.Message);
             }
             this.Close();
@@ -129,7 +120,7 @@ namespace Information_System_Galicia
             groupBox1.Enabled = false;
             groupBox2.Enabled = false;
             Permission perm = new Permission();
-            if (perm.GetPermission() == "admin") { 
+            if (perm.GetPermission() == "admin") {
                 // if user logged in is admin reverting the tools to enabled
                 btnDel.Enabled = true;
                 btnUpdate.Enabled = true;
@@ -138,13 +129,11 @@ namespace Information_System_Galicia
                 groupBox2.Enabled = true;
             }
             // if editing is true hiding add button else hiding update and delete button
-            if (this.edit == true)
-            {
+            if (this.edit == true) {
                 course();
                 searchStudent();
                 btnAdd.Hide();
-            }
-            else { 
+            } else {
                 course();
                 btnDel.Enabled = false;
                 btnUpdate.Enabled = false;
@@ -153,15 +142,12 @@ namespace Information_System_Galicia
             }
         }
 
-        public void searchStudent()
-        {
-            try
-            {
+        public void searchStudent() {
+            try {
                 connect.Open();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM Student_Info WHERE StudentID='" + studid + "'", connect);
                 SqlDataReader dr = cmd.ExecuteReader();
-                if (dr.Read())
-                {
+                if (dr.Read()) {
                     // putting data to textboxes
                     this.txtStudId.Text = dr.GetString(0);
                     this.txtFname.Text = dr.GetString(1);
@@ -184,15 +170,12 @@ namespace Information_System_Galicia
                     this.cmbCourse.Text = dr.GetString(10);
                 }
                 connect.Close();
-            }
-            catch (Exception ex)
-            {
+            } catch (Exception ex) {
                 MessageBox.Show(ex.Message);
             }
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
+        private void btnUpdate_Click(object sender, EventArgs e) {
             string bday = this.bdayM.Text + " " + this.bdayD.Text + " " + this.bdayY.Text;
             try {
                 SqlDataAdapter sda = new SqlDataAdapter();
@@ -214,16 +197,13 @@ namespace Information_System_Galicia
                 connect.Close();
                 this.Close();
                 MessageBox.Show("Record successfully updated!");
-            }
-            catch (Exception ex) {
+            } catch (Exception ex) {
                 MessageBox.Show(ex.Message);
             }
         }
 
-        private void btnDel_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void btnDel_Click(object sender, EventArgs e) {
+            try {
                 SqlDataAdapter sda = new SqlDataAdapter();
                 SqlCommandBuilder cmd = new SqlCommandBuilder(sda);
                 sda.UpdateCommand = new SqlCommand("DELETE FROM Student_Info WHERE StudentID='" + studid + "'", connect);
@@ -233,15 +213,12 @@ namespace Information_System_Galicia
                 connect.Close();
                 this.Close();
                 MessageBox.Show("Record successfully deleted!");
-            }
-            catch (Exception ex)
-            {
+            } catch (Exception ex) {
                 MessageBox.Show(ex.Message);
             }
         }
 
-        private void StudentInfo_FormClosed(object sender, FormClosedEventArgs e)
-        {
+        private void StudentInfo_FormClosed(object sender, FormClosedEventArgs e) {
             // if editing is true and form is closed open the view student form
             if (this.edit == true) {
                 viewInfo vv = new viewInfo();
@@ -250,8 +227,7 @@ namespace Information_System_Galicia
             }
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
+        private void groupBox1_Enter(object sender, EventArgs e) {
             this.TopMost = false;
         }
     }

@@ -9,24 +9,18 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 
-namespace Information_System_Galicia
-{
-    public partial class UserView : Form
-    {
+namespace Information_System_Galicia {
+    public partial class UserView : Form {
         SqlConnection conn = dbClass.getConnection();
-        public UserView()
-        {
+        public UserView() {
             InitializeComponent();
         }
 
-        private void UserView_Load(object sender, EventArgs e)
-        {
+        private void UserView_Load(object sender, EventArgs e) {
             displayInformation();
         }
-        public void displayInformation()
-        {
-            try
-            {
+        public void displayInformation() {
+            try {
                 conn.Open();
                 DataTable dt = new DataTable();
                 SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM security", conn);
@@ -46,15 +40,13 @@ namespace Information_System_Galicia
                 dataGridView1.Columns[4].ReadOnly = true;
 
                 conn.Close();
-            }
-            catch (Exception ex) //TO FILTER THE ERROR FROM YOUR SYSTEM
+            } catch (Exception ex) //TO FILTER THE ERROR FROM YOUR SYSTEM
             {
                 MessageBox.Show(ex.Message);
             }
         }
 
-        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e) {
             UsersAdd ca = new UsersAdd();
             ca.userid = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             ca.userAddBtn.Hide();

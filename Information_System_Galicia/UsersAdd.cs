@@ -9,45 +9,32 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 
-namespace Information_System_Galicia
-{
-    public partial class UsersAdd : Form
-    {
+namespace Information_System_Galicia {
+    public partial class UsersAdd : Form {
         public string userid;
         public bool edit;
         SqlConnection connect = dbClass.getConnection();
-        public UsersAdd()
-        {
+        public UsersAdd() {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (txtUser.Text == "" || txtPass.Text == "" || cmbPerm.Text == "")
-            {
+        private void button1_Click(object sender, EventArgs e) {
+            if (txtUser.Text == "" || txtPass.Text == "" || cmbPerm.Text == "") {
                 MessageBox.Show("Fill up all forms!");
-            }
-            else {
-                if (txtPass.Text != txtRePass.Text)
-                {
+            } else {
+                if (txtPass.Text != txtRePass.Text) {
                     MessageBox.Show("Password Mismatched!");
-                }
-                else
-                {
+                } else {
                     connect.Open();
                     SqlCommand cmd = new SqlCommand("SELECT * FROM security WHERE username = '" + txtUser.Text + "'", connect);
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
                     connect.Close();
-                    if (dt.Rows.Count > 0)
-                    {
+                    if (dt.Rows.Count > 0) {
                         MessageBox.Show("User exist!");
-                    }
-                    else
-                    {
-                        try
-                        {
+                    } else {
+                        try {
                             SqlDataAdapter sda = new SqlDataAdapter();
                             sda.InsertCommand = new SqlCommand("INSERT INTO security (fullname, username, password, type) VALUES (@fullname, @user, @pass, @type)", connect);
                             sda.InsertCommand.Parameters.Add("@fullname", SqlDbType.VarChar).Value = txtFullName.Text;
@@ -57,9 +44,7 @@ namespace Information_System_Galicia
                             connect.Open();
                             sda.InsertCommand.ExecuteNonQuery();
                             connect.Close();
-                        }
-                        catch (Exception ex)
-                        {
+                        } catch (Exception ex) {
                             MessageBox.Show(ex.Message);
                         }
                         this.Close();
@@ -72,8 +57,7 @@ namespace Information_System_Galicia
             }
         }
 
-        private void UsersAdd_Load(object sender, EventArgs e)
-        {
+        private void UsersAdd_Load(object sender, EventArgs e) {
             updateBtn.Visible = false;
             deleteBtn.Visible = false;
             if (this.edit == true) {
@@ -83,15 +67,12 @@ namespace Information_System_Galicia
             }
         }
 
-        public void searchUser()
-        {
-            try
-            {
+        public void searchUser() {
+            try {
                 connect.Open();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM security WHERE id='" + this.userid + "'", connect);
                 SqlDataReader dr = cmd.ExecuteReader();
-                if (dr.Read())
-                {
+                if (dr.Read()) {
                     this.txtFullName.Text = dr.GetString(1);
                     this.txtUser.Text = dr.GetString(2);
                     this.txtPass.Text = dr.GetString(3);
@@ -99,17 +80,13 @@ namespace Information_System_Galicia
                     this.cmbPerm.Text = dr.GetString(4);
                 }
                 connect.Close();
-            }
-            catch (Exception ex)
-            {
+            } catch (Exception ex) {
                 MessageBox.Show(ex.Message);
             }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
+        private void button1_Click_1(object sender, EventArgs e) {
+            try {
                 SqlDataAdapter sda = new SqlDataAdapter();
                 SqlCommandBuilder cmd = new SqlCommandBuilder(sda);
 
@@ -123,27 +100,21 @@ namespace Information_System_Galicia
                 connect.Close();
                 this.Close();
                 MessageBox.Show("Record successfully updated!");
-            }
-            catch (Exception ex)
-            {
+            } catch (Exception ex) {
                 MessageBox.Show(ex.Message);
             }
         }
 
-        private void UsersAdd_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            if (this.edit == true)
-            {
+        private void UsersAdd_FormClosed(object sender, FormClosedEventArgs e) {
+            if (this.edit == true) {
                 UserView vv = new UserView();
                 vv.Show();
                 vv.TopMost = true;
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void button2_Click(object sender, EventArgs e) {
+            try {
                 SqlDataAdapter sda = new SqlDataAdapter();
                 SqlCommandBuilder cmd = new SqlCommandBuilder(sda);
                 sda.UpdateCommand = new SqlCommand("DELETE FROM security WHERE id='" + this.userid + "'", connect);
@@ -153,9 +124,7 @@ namespace Information_System_Galicia
                 connect.Close();
                 this.Close();
                 MessageBox.Show("Record successfully deleted!");
-            }
-            catch (Exception ex)
-            {
+            } catch (Exception ex) {
                 MessageBox.Show(ex.Message);
             }
         }

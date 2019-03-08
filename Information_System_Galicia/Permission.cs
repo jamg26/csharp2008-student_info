@@ -5,10 +5,8 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 
-namespace Information_System_Galicia
-{
-    class Permission
-    {
+namespace Information_System_Galicia {
+    class Permission {
         SqlConnection conn = dbClass.getConnection();
 
         public void UpdatePermission(string perm) {
@@ -19,15 +17,13 @@ namespace Information_System_Galicia
             sd.UpdateCommand.ExecuteNonQuery();
             conn.Close();
         }
-        public string GetPermission()
-        {
+        public string GetPermission() {
             // every form this method will be called to check users permission
             SqlCommand cmd = new SqlCommand("SELECT type FROM session WHERE username='admin'", conn);
             string perm = "";
             conn.Open();
             SqlDataReader dr = cmd.ExecuteReader();
-            if (dr.Read())
-            {
+            if (dr.Read()) {
                 perm = dr.GetString(0);
             }
             conn.Close();

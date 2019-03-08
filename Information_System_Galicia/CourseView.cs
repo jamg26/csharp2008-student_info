@@ -8,24 +8,18 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace Information_System_Galicia
-{
-    public partial class CourseView : Form
-    {
+namespace Information_System_Galicia {
+    public partial class CourseView : Form {
         SqlConnection conn = dbClass.getConnection();
-        public CourseView()
-        {
+        public CourseView() {
             InitializeComponent();
         }
 
-        private void CourseView_Load(object sender, EventArgs e)
-        {
+        private void CourseView_Load(object sender, EventArgs e) {
             displayInformation();
         }
-        public void displayInformation()
-        {
-            try
-            {
+        public void displayInformation() {
+            try {
                 conn.Open();
                 DataTable dt = new DataTable();
                 SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Course", conn);
@@ -42,15 +36,13 @@ namespace Information_System_Galicia
                 dataGridView1.Columns[2].ReadOnly = true;
 
                 conn.Close();
-            }
-            catch (Exception ex) //TO FILTER THE ERROR FROM YOUR SYSTEM
+            } catch (Exception ex) //TO FILTER THE ERROR FROM YOUR SYSTEM
             {
                 MessageBox.Show(ex.Message);
             }
         }
 
-        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e) {
             CourseAdd ca = new CourseAdd();
             ca.courseid = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             ca.courseBtnAdd.Enabled = false;

@@ -65,7 +65,7 @@ namespace Information_System_Galicia
                 mm.label12.Text = this.name;
                 mm.userLogged.Text = textBox2.Text;
                 // calling the menu form
-                
+
                 mm.Show();
                 this.Hide();
             }
@@ -85,12 +85,14 @@ namespace Information_System_Galicia
             this.WindowState = FormWindowState.Maximized;
         }
 
-        private void textBox2_Enter(object sender, EventArgs e) {
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
             textBox2.Text = "";
             textBox2.ForeColor = Color.Black;
         }
 
-        private void textBox1_Enter(object sender, EventArgs e) {
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
             textBox1.Text = "";
             textBox1.ForeColor = Color.Black;
         }

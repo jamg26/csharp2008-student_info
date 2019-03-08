@@ -5,15 +5,12 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 
-namespace Information_System_Galicia
-{
-    class dbClass
-    {
+namespace Information_System_Galicia {
+    class dbClass {
         public string dbS = "sqlserverinstance.crxgtyhmldr1.ap-southeast-1.rds.amazonaws.com";
         public string dbN = "Info_Sys_Galicia";
         public string dbU = "jamg";
-        public static SqlConnection getConnection()
-        {
+        public static SqlConnection getConnection() {
             string dbServer = "sqlserverinstance.crxgtyhmldr1.ap-southeast-1.rds.amazonaws.com";
             string dbName = "Info_Sys_Galicia";
             string dbUser = "jamg";
