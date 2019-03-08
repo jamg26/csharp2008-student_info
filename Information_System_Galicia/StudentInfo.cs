@@ -10,7 +10,6 @@ using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Net.Mail;
 
-
 namespace Information_System_Galicia
 {
     public partial class StudentInfo : Form
@@ -24,11 +23,6 @@ namespace Information_System_Galicia
             InitializeComponent();
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox9_Enter(object sender, EventArgs e)
         {
             if (txtEmail.Text == "SOMEONE@EXAMPLE.COM")
@@ -36,16 +30,6 @@ namespace Information_System_Galicia
                 txtEmail.Text = "";
             }
             txtEmail.ForeColor = Color.Black;
-        }
-
-        private void textBox9_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void course() {
@@ -62,7 +46,6 @@ namespace Information_System_Galicia
                 MessageBox.Show(ex.Message);
             }
         }
-
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -122,6 +105,7 @@ namespace Information_System_Galicia
             obj.Show();
             MessageBox.Show("Record is already added!");
         }
+
         void ClearEntry() {
             txtFname.Text = "";
             txtMname.Text = "";
@@ -135,53 +119,6 @@ namespace Information_System_Galicia
             bdayD.SelectedIndex = -1;
             bdayY.SelectedIndex = -1;
             cmbCourse.SelectedIndex = -1;
-        }
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e) {
-
-        }
-
-        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e) {
-
         }
 
         private void StudentInfo_Load(object sender, EventArgs e) {
@@ -214,7 +151,6 @@ namespace Information_System_Galicia
                 btnDel.Hide();
                 btnUpdate.Hide();
             }
-            
         }
 
         public void searchStudent()
@@ -246,7 +182,6 @@ namespace Information_System_Galicia
                     this.txtEmail.ForeColor = Color.Black;
                     this.cmbYr.Text = dr.GetString(9);
                     this.cmbCourse.Text = dr.GetString(10);
-
                 }
                 connect.Close();
             }

@@ -68,7 +68,6 @@
             this.txtStudId.Name = "txtStudId";
             this.txtStudId.Size = new System.Drawing.Size(121, 20);
             this.txtStudId.TabIndex = 0;
-            this.txtStudId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -99,7 +98,6 @@
             this.txtFname.Name = "txtFname";
             this.txtFname.Size = new System.Drawing.Size(160, 20);
             this.txtFname.TabIndex = 0;
-            this.txtFname.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
             // 
@@ -119,7 +117,6 @@
             this.txtMname.Name = "txtMname";
             this.txtMname.Size = new System.Drawing.Size(142, 20);
             this.txtMname.TabIndex = 1;
-            this.txtMname.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label4
             // 
@@ -139,7 +136,6 @@
             this.txtLname.Name = "txtLname";
             this.txtLname.Size = new System.Drawing.Size(184, 20);
             this.txtLname.TabIndex = 2;
-            this.txtLname.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label5
             // 
@@ -159,7 +155,6 @@
             this.txtAdd.Name = "txtAdd";
             this.txtAdd.Size = new System.Drawing.Size(500, 20);
             this.txtAdd.TabIndex = 3;
-            this.txtAdd.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label6
             // 
@@ -221,7 +216,6 @@
             this.txtEmail.Size = new System.Drawing.Size(227, 20);
             this.txtEmail.TabIndex = 9;
             this.txtEmail.Text = "SOMEONE@EXAMPLE.COM";
-            this.txtEmail.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             this.txtEmail.Enter += new System.EventHandler(this.textBox9_Enter);
             // 
             // label10
@@ -259,7 +253,6 @@
             this.cmbYr.Name = "cmbYr";
             this.cmbYr.Size = new System.Drawing.Size(121, 21);
             this.cmbYr.TabIndex = 1;
-            this.cmbYr.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // txtGender
             // 
@@ -273,7 +266,6 @@
             this.txtGender.Name = "txtGender";
             this.txtGender.Size = new System.Drawing.Size(79, 21);
             this.txtGender.TabIndex = 7;
-            this.txtGender.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // bdayM
             // 
@@ -296,7 +288,6 @@
             this.bdayM.Name = "bdayM";
             this.bdayM.Size = new System.Drawing.Size(89, 21);
             this.bdayM.TabIndex = 4;
-            this.bdayM.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // bdayD
             // 
@@ -338,7 +329,6 @@
             this.bdayD.Name = "bdayD";
             this.bdayD.Size = new System.Drawing.Size(53, 21);
             this.bdayD.TabIndex = 5;
-            this.bdayD.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -435,7 +425,6 @@
             this.bdayY.Name = "bdayY";
             this.bdayY.Size = new System.Drawing.Size(66, 21);
             this.bdayY.TabIndex = 6;
-            this.bdayY.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -461,7 +450,6 @@
             this.cmbCourse.Name = "cmbCourse";
             this.cmbCourse.Size = new System.Drawing.Size(121, 21);
             this.cmbCourse.TabIndex = 2;
-            this.cmbCourse.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
             // 
             // btnAdd
             // 
