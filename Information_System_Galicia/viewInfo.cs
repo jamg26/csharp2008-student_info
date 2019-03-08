@@ -23,8 +23,6 @@ namespace Information_System_Galicia
         {
             displayInformation();
             dataGridView1.Sort(dataGridView1.Columns[0], ListSortDirection.Ascending);
-
-            
         }
 
         public void displayInformation()
@@ -67,7 +65,6 @@ namespace Information_System_Galicia
                      dataGridView1.Columns[8].ReadOnly = true;
                      dataGridView1.Columns[9].ReadOnly = true;
                      dataGridView1.Columns[10].ReadOnly = true;
-
                      conn.Close();
                  }
                  catch (Exception ex) //TO FILTER THE ERROR FROM YOUR SYSTEM
@@ -75,11 +72,6 @@ namespace Information_System_Galicia
                     MessageBox.Show(ex.Message);
                  }
              }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -92,6 +84,5 @@ namespace Information_System_Galicia
             SI.Show();
             SI.TopMost = true;
         }
-
     }
 }
