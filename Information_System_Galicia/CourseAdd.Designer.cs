@@ -93,7 +93,6 @@
             this.txtCourse.Name = "txtCourse";
             this.txtCourse.Size = new System.Drawing.Size(126, 20);
             this.txtCourse.TabIndex = 4;
-            this.txtCourse.TextChanged += new System.EventHandler(this.txtFname_TextChanged);
             // 
             // label2
             // 

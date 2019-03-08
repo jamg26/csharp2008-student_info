@@ -45,7 +45,6 @@ namespace Information_System_Galicia
                     connect.Open();
                     sda.InsertCommand.ExecuteNonQuery(); // inserting new course to the database
                     connect.Close();
-
                 }
                 catch (Exception ex)
                 {
@@ -55,14 +54,7 @@ namespace Information_System_Galicia
                 CourseView cv = new CourseView();
                 cv.Show();
                 MessageBox.Show("New course added!");
-            
             }
-            
-        }
-
-        private void txtFname_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void CourseAdd_Load(object sender, EventArgs e)
@@ -158,13 +150,11 @@ namespace Information_System_Galicia
                 connect.Close();
                 this.Close();
                 MessageBox.Show("Record successfully deleted!");
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-
     }
 }
