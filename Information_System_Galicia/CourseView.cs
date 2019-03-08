@@ -18,11 +18,6 @@ namespace Information_System_Galicia
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void CourseView_Load(object sender, EventArgs e)
         {
             displayInformation();

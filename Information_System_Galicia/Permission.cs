@@ -33,6 +33,5 @@ namespace Information_System_Galicia
             conn.Close();
             return perm;
         }
-
     }
 }
