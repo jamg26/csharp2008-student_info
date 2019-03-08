@@ -53,3 +53,7 @@ C:\Users\jammm\Desktop\repositories\Information_System_Galicia\Information_Syste
 C:\Users\jammm\Desktop\repositories\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.CourseView.resources
 C:\Users\jammm\Desktop\repositories\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.UsersAdd.resources
 C:\Users\jammm\Desktop\repositories\Information_System_Galicia\Information_System_Galicia\obj\Debug\Information_System_Galicia.UserView.resources
+D:\Galicia\repo\Information_System_Galicia\obj\Debug\Information_System_Galicia.CourseAdd.resources
+D:\Galicia\repo\Information_System_Galicia\obj\Debug\Information_System_Galicia.CourseView.resources
+D:\Galicia\repo\Information_System_Galicia\obj\Debug\Information_System_Galicia.UsersAdd.resources
+D:\Galicia\repo\Information_System_Galicia\obj\Debug\Information_System_Galicia.UserView.resources

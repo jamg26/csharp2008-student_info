@@ -67,6 +67,7 @@ namespace Information_System_Galicia
             addToolStripMenuItem.Enabled = false;
             courseAdd.Enabled = false;
             usersToolStripMenuItem.Visible = false;
+            refreshToolStripMenuItem.Visible = false;
             Permission permission = new Permission();
             if (permission.GetPermission() == "admin")
             {

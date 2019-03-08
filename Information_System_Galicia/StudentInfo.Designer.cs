@@ -126,7 +126,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(330, 25);
+            this.label4.Location = new System.Drawing.Point(321, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 9);
             this.label4.TabIndex = 7;
@@ -135,9 +135,9 @@
             // txtLname
             // 
             this.txtLname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtLname.Location = new System.Drawing.Point(331, 35);
+            this.txtLname.Location = new System.Drawing.Point(322, 35);
             this.txtLname.Name = "txtLname";
-            this.txtLname.Size = new System.Drawing.Size(175, 20);
+            this.txtLname.Size = new System.Drawing.Size(184, 20);
             this.txtLname.TabIndex = 2;
             this.txtLname.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
@@ -456,7 +456,6 @@
             // 
             // cmbCourse
             // 
-            this.cmbCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCourse.FormattingEnabled = true;
             this.cmbCourse.Location = new System.Drawing.Point(6, 131);
             this.cmbCourse.Name = "cmbCourse";

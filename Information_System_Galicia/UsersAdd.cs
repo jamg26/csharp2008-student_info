@@ -50,7 +50,8 @@ namespace Information_System_Galicia
                         try
                         {
                             SqlDataAdapter sda = new SqlDataAdapter();
-                            sda.InsertCommand = new SqlCommand("INSERT INTO security (username, password, type) VALUES (@user, @pass, @type)", connect);
+                            sda.InsertCommand = new SqlCommand("INSERT INTO security (fullname, username, password, type) VALUES (@fullname, @user, @pass, @type)", connect);
+                            sda.InsertCommand.Parameters.Add("@fullname", SqlDbType.VarChar).Value = txtFullName.Text;
                             sda.InsertCommand.Parameters.Add("@user", SqlDbType.VarChar).Value = txtUser.Text;
                             sda.InsertCommand.Parameters.Add("@pass", SqlDbType.VarChar).Value = txtPass.Text;
                             sda.InsertCommand.Parameters.Add("@type", SqlDbType.VarChar).Value = cmbPerm.Text;
@@ -94,10 +95,11 @@ namespace Information_System_Galicia
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    this.txtUser.Text = dr.GetString(1);
-                    this.txtPass.Text = dr.GetString(2);
-                    this.txtRePass.Text = dr.GetString(2);
-                    this.cmbPerm.Text = dr.GetString(3);
+                    this.txtFullName.Text = dr.GetString(1);
+                    this.txtUser.Text = dr.GetString(2);
+                    this.txtPass.Text = dr.GetString(3);
+                    this.txtRePass.Text = dr.GetString(3);
+                    this.cmbPerm.Text = dr.GetString(4);
                 }
                 connect.Close();
             }

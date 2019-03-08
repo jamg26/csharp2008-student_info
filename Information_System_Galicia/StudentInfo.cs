@@ -240,36 +240,8 @@ namespace Information_System_Galicia
                     this.txtEmail.Text = dr.GetString(8);
                     this.txtEmail.ForeColor = Color.Black;
                     this.cmbYr.Text = dr.GetString(9);
+                    this.cmbCourse.Text = dr.GetString(10);
 
-                    int cNum;
-                    switch(dr.GetString(10)){
-                        case "BSIT":
-                            cNum = 0;
-                            break;
-                        case "BSCRIM":
-                            cNum = 1;
-                            break;
-                        case "BSHRM":
-                            cNum = 2;
-                            break;
-                        case "BEED":
-                            cNum = 3;
-                            break;
-                        case "BSED":
-                            cNum = 4;
-                            break;
-                        case "BSBA":
-                            cNum = 5;
-                            break;
-                        case "BSAT":
-                            cNum = 6;
-                            break;
-                        default:
-                            cNum = -1;
-                            break;
-                    }
-
-                    this.cmbCourse.SelectedIndex = cNum;
                 }
                 connect.Close();
             }
