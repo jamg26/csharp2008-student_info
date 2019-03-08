@@ -233,13 +233,11 @@ namespace Information_System_Galicia
                 connect.Close();
                 this.Close();
                 MessageBox.Show("Record successfully deleted!");
-                
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
 
         private void StudentInfo_FormClosed(object sender, FormClosedEventArgs e)
@@ -250,13 +248,11 @@ namespace Information_System_Galicia
                 vv.Show();
                 vv.TopMost = true;
             }
-            
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
             this.TopMost = false;
         }
-
     }
 }
