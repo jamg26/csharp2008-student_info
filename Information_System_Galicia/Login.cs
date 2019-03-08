@@ -17,6 +17,7 @@ namespace Information_System_Galicia
     {
         SqlConnection conn = dbClass.getConnection();
         public string perm;
+        public string name;
         public Login()
         {
             InitializeComponent();
@@ -37,7 +38,7 @@ namespace Information_System_Galicia
         {
             button1.Hide();
             conn.Open();
-            SqlCommand cmd = new SqlCommand("SELECT type FROM security WHERE username = '" + textBox2.Text + "' AND password = '" + textBox1.Text + "'", conn);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM security WHERE username = '" + textBox2.Text + "' AND password = '" + textBox1.Text + "'", conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -46,14 +47,14 @@ namespace Information_System_Galicia
             {
                 conn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
-                this.Hide();
                 dbClass db = new dbClass();
                 Menu mm = new Menu();
                 // Preparing permissions before showing the menu
                 Permission permission = new Permission();
                 if (dr.Read())
                 {
-                    this.perm = dr.GetString(0); // passing value from user type to perm variable
+                    this.perm = dr.GetString(4); // passing value from user type to perm variable
+                    this.name = dr.GetString(1);
                     conn.Close();
                     if (this.perm == "admin") // if the user type of logged user is admin
                     {
@@ -73,9 +74,12 @@ namespace Information_System_Galicia
                 mm.dbUser.Text = db.dbU;
                 mm.lastLog.Text = dtime.ToString("MM/dd/yyyy h:mm tt");
                 mm.txtUserType.Text = this.perm;
+                mm.label12.Text = this.name;
                 mm.userLogged.Text = textBox2.Text;
                 // calling the menu form
+                
                 mm.Show();
+                this.Hide();
             }
             else
             {
@@ -100,7 +104,8 @@ namespace Information_System_Galicia
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void button1_MouseHover(object sender, EventArgs e) {

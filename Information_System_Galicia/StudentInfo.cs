@@ -320,7 +320,7 @@ namespace Information_System_Galicia
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
-
+            this.TopMost = false;
         }
 
     }

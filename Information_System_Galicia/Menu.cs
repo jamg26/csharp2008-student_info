@@ -65,6 +65,9 @@ namespace Information_System_Galicia
         }
         private void Menu_Load(object sender, EventArgs e)
         {
+            //applying fullscreen
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.WindowState = FormWindowState.Maximized;
             getUserCount(); // get stats of users
             getCourseCount(); // get stats of course
             // disabled by default
@@ -79,6 +82,7 @@ namespace Information_System_Galicia
                 // reverting toolstrip to enabled
                 addToolStripMenuItem.Enabled = true;
                 usersToolStripMenuItem.Visible = true;
+                refreshToolStripMenuItem.Visible = true;
                 courseAdd.Enabled = true;
             }
 
@@ -145,9 +149,7 @@ namespace Information_System_Galicia
 
         private void label3_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
-            this.Hide();
-            login.Show();
+
         }
 
 
@@ -227,6 +229,21 @@ namespace Information_System_Galicia
         private void logoutToolStripMenuItem_MouseLeave(object sender, EventArgs e)
         {
             logoutToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            System.Environment.Exit(0); // exit the app
+        }
+
+        private void label11_MouseEnter(object sender, EventArgs e)
+        {
+            label11.Font = new Font(label11.Font, FontStyle.Bold);
+        }
+
+        private void label11_MouseLeave(object sender, EventArgs e)
+        {
+            label11.Font = new Font(label11.Font, FontStyle.Regular);
         }
     }
 }

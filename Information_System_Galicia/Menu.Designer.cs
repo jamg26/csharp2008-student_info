@@ -60,14 +60,17 @@
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.courseCount = new System.Windows.Forms.Label();
-            this.userCount = new System.Windows.Forms.Label();
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.courseCount = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.userCount = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -78,6 +81,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.countFemale);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.countMale);
@@ -85,9 +89,9 @@
             this.groupBox1.Controls.Add(this.countReg);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.groupBox1.Location = new System.Drawing.Point(13, 28);
+            this.groupBox1.Location = new System.Drawing.Point(12, 40);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(244, 92);
+            this.groupBox1.Size = new System.Drawing.Size(355, 136);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Stats";
@@ -153,6 +157,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.Controls.Add(this.dbName);
             this.groupBox2.Controls.Add(this.dbUser);
             this.groupBox2.Controls.Add(this.dbServer);
@@ -160,9 +165,9 @@
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Window;
-            this.groupBox2.Location = new System.Drawing.Point(13, 218);
+            this.groupBox2.Location = new System.Drawing.Point(12, 309);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(515, 105);
+            this.groupBox2.Size = new System.Drawing.Size(737, 125);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Database";
@@ -227,6 +232,9 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.txtUserType);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.lastLog);
@@ -234,9 +242,9 @@
             this.groupBox3.Controls.Add(this.userLogged);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.groupBox3.Location = new System.Drawing.Point(263, 27);
+            this.groupBox3.Location = new System.Drawing.Point(373, 40);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(265, 92);
+            this.groupBox3.Size = new System.Drawing.Size(376, 135);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Client Information";
@@ -245,7 +253,7 @@
             // txtUserType
             // 
             this.txtUserType.AutoSize = true;
-            this.txtUserType.Location = new System.Drawing.Point(83, 63);
+            this.txtUserType.Location = new System.Drawing.Point(101, 63);
             this.txtUserType.Name = "txtUserType";
             this.txtUserType.Size = new System.Drawing.Size(10, 13);
             this.txtUserType.TabIndex = 6;
@@ -256,15 +264,15 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(7, 63);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.Size = new System.Drawing.Size(85, 13);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Permission:";
+            this.label3.Text = "Permission level:";
             this.label3.Click += new System.EventHandler(this.label3_Click_1);
             // 
             // lastLog
             // 
             this.lastLog.AutoSize = true;
-            this.lastLog.Location = new System.Drawing.Point(83, 42);
+            this.lastLog.Location = new System.Drawing.Point(101, 42);
             this.lastLog.Name = "lastLog";
             this.lastLog.Size = new System.Drawing.Size(10, 13);
             this.lastLog.TabIndex = 3;
@@ -283,7 +291,7 @@
             // userLogged
             // 
             this.userLogged.AutoSize = true;
-            this.userLogged.Location = new System.Drawing.Point(83, 20);
+            this.userLogged.Location = new System.Drawing.Point(101, 20);
             this.userLogged.Name = "userLogged";
             this.userLogged.Size = new System.Drawing.Size(10, 13);
             this.userLogged.TabIndex = 1;
@@ -311,14 +319,14 @@
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
             this.addToolStripMenuItem.Text = "Add";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // viewInformationToolStripMenuItem
             // 
             this.viewInformationToolStripMenuItem.Name = "viewInformationToolStripMenuItem";
-            this.viewInformationToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.viewInformationToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
             this.viewInformationToolStripMenuItem.Text = "View";
             this.viewInformationToolStripMenuItem.Click += new System.EventHandler(this.viewInformationToolStripMenuItem_Click);
             // 
@@ -332,7 +340,7 @@
             this.logoutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(540, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(761, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -349,14 +357,14 @@
             // courseAdd
             // 
             this.courseAdd.Name = "courseAdd";
-            this.courseAdd.Size = new System.Drawing.Size(152, 22);
+            this.courseAdd.Size = new System.Drawing.Size(99, 22);
             this.courseAdd.Text = "Add";
             this.courseAdd.Click += new System.EventHandler(this.courseAdd_Click);
             // 
             // courseView
             // 
             this.courseView.Name = "courseView";
-            this.courseView.Size = new System.Drawing.Size(152, 22);
+            this.courseView.Size = new System.Drawing.Size(99, 22);
             this.courseView.Text = "View";
             this.courseView.Click += new System.EventHandler(this.courseView_Click);
             // 
@@ -372,76 +380,16 @@
             // addToolStripMenuItem1
             // 
             this.addToolStripMenuItem1.Name = "addToolStripMenuItem1";
-            this.addToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.addToolStripMenuItem1.Size = new System.Drawing.Size(99, 22);
             this.addToolStripMenuItem1.Text = "Add";
             this.addToolStripMenuItem1.Click += new System.EventHandler(this.addToolStripMenuItem1_Click);
             // 
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
             this.viewToolStripMenuItem.Text = "View";
             this.viewToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.courseCount);
-            this.groupBox4.Controls.Add(this.label5);
-            this.groupBox4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox4.Location = new System.Drawing.Point(13, 126);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(244, 86);
-            this.groupBox4.TabIndex = 4;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Course Stats";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.userCount);
-            this.groupBox5.Controls.Add(this.label10);
-            this.groupBox5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox5.Location = new System.Drawing.Point(263, 126);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(265, 86);
-            this.groupBox5.TabIndex = 4;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "User Stats";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 20);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Course Count:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(10, 19);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 13);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "User Count:";
-            // 
-            // courseCount
-            // 
-            this.courseCount.AutoSize = true;
-            this.courseCount.Location = new System.Drawing.Point(91, 20);
-            this.courseCount.Name = "courseCount";
-            this.courseCount.Size = new System.Drawing.Size(10, 13);
-            this.courseCount.TabIndex = 1;
-            this.courseCount.Text = "-";
-            // 
-            // userCount
-            // 
-            this.userCount.AutoSize = true;
-            this.userCount.Location = new System.Drawing.Point(83, 20);
-            this.userCount.Name = "userCount";
-            this.userCount.Size = new System.Drawing.Size(10, 13);
-            this.userCount.TabIndex = 1;
-            this.userCount.Text = "-";
             // 
             // refreshToolStripMenuItem
             // 
@@ -461,12 +409,111 @@
             this.logoutToolStripMenuItem.MouseEnter += new System.EventHandler(this.logoutToolStripMenuItem_MouseEnter);
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click_1);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox4.Controls.Add(this.courseCount);
+            this.groupBox4.Controls.Add(this.label5);
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox4.Location = new System.Drawing.Point(12, 182);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(355, 121);
+            this.groupBox4.TabIndex = 4;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Course Stats";
+            // 
+            // courseCount
+            // 
+            this.courseCount.AutoSize = true;
+            this.courseCount.Location = new System.Drawing.Point(88, 41);
+            this.courseCount.Name = "courseCount";
+            this.courseCount.Size = new System.Drawing.Size(10, 13);
+            this.courseCount.TabIndex = 1;
+            this.courseCount.Text = "-";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 41);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Course Count:";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox5.Controls.Add(this.userCount);
+            this.groupBox5.Controls.Add(this.label10);
+            this.groupBox5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox5.Location = new System.Drawing.Point(373, 182);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(376, 121);
+            this.groupBox5.TabIndex = 4;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "User Stats";
+            // 
+            // userCount
+            // 
+            this.userCount.AutoSize = true;
+            this.userCount.Location = new System.Drawing.Point(76, 41);
+            this.userCount.Name = "userCount";
+            this.userCount.Size = new System.Drawing.Size(10, 13);
+            this.userCount.TabIndex = 1;
+            this.userCount.Text = "-";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(7, 41);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(63, 13);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "User Count:";
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.Control;
+            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label11.Location = new System.Drawing.Point(741, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(20, 20);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "X";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label11.MouseLeave += new System.EventHandler(this.label11_MouseLeave);
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            this.label11.MouseEnter += new System.EventHandler(this.label11_MouseEnter);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(101, 85);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(10, 13);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "-";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(7, 85);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(38, 13);
+            this.label14.TabIndex = 7;
+            this.label14.Text = "Name:";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(540, 334);
+            this.ClientSize = new System.Drawing.Size(761, 450);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -538,5 +585,8 @@
         public System.Windows.Forms.Label userCount;
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+        private System.Windows.Forms.Label label11;
+        public System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label14;
     }
 }
