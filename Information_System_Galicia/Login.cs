@@ -20,7 +20,6 @@ namespace Information_System_Galicia
         public Login()
         {
             InitializeComponent();
-            //this.ActiveControl = textBox2;
             this.AcceptButton = button1;
         }
 
@@ -47,46 +46,39 @@ namespace Information_System_Galicia
             {
                 conn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
-                //MessageBox.Show("Access Granted!");
                 this.Hide();
-                //MainMenu mm = new MainMenu();
-                //mm.Show();
                 dbClass db = new dbClass();
                 Menu mm = new Menu();
-
+                // Preparing permissions before showing the menu
                 Permission permission = new Permission();
                 if (dr.Read())
                 {
-                    this.perm = dr.GetString(0);
+                    this.perm = dr.GetString(0); // passing value from user type to perm variable
                     conn.Close();
-                    if (this.perm == "admin")
+                    if (this.perm == "admin") // if the user type of logged user is admin
                     {
                         permission.UpdatePermission(this.perm);
+                        // optional put messagebox "You are logged in as admin"
                     }
                     else
                     {
                         permission.UpdatePermission(this.perm);
+                        // optional put messagebox "You are logged in as user"
                     }
                 }
-                
-
-                
-
-
+                // setting menu items values
                 DateTime dtime = DateTime.Now;
-
                 mm.dbServer.Text = db.dbS;
                 mm.dbName.Text = db.dbN;
                 mm.dbUser.Text = db.dbU;
                 mm.lastLog.Text = dtime.ToString("MM/dd/yyyy h:mm tt");
                 mm.txtUserType.Text = this.perm;
                 mm.userLogged.Text = textBox2.Text;
+                // calling the menu form
                 mm.Show();
-                
             }
             else
             {
-                //pictureBox1.Image = Properties.Resources.dinogameover;
                 MessageBox.Show("Access Denied!");
                 textBox2.Clear();
                 textBox1.Clear();
@@ -112,19 +104,19 @@ namespace Information_System_Galicia
         }
 
         private void button1_MouseHover(object sender, EventArgs e) {
-            //button1.ForeColor = Color.Red;
+            
         }
 
         private void button1_MouseLeave(object sender, EventArgs e) {
-            //button1.ForeColor = Color.Black;
+            
         }
 
         private void button1_Enter(object sender, EventArgs e) {
-            //button1.ForeColor = Color.Red;
+            
         }
 
         private void button1_Leave(object sender, EventArgs e) {
-            //button1.ForeColor = Color.Black;
+           
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -147,7 +139,7 @@ namespace Information_System_Galicia
         }
 
         private void textBox2_KeyDown(object sender, KeyEventArgs e) {
-            //pictureBox1.Image = Properties.Resources.dino;
+            
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -157,7 +149,7 @@ namespace Information_System_Galicia
 
         private void label3_Click(object sender, EventArgs e)
         {
-            System.Environment.Exit(0);
+            System.Environment.Exit(0); // exit the app
         }
 
         private void label3_MouseHover(object sender, EventArgs e)

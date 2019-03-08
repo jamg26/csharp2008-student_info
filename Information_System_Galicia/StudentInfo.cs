@@ -107,6 +107,7 @@ namespace Information_System_Galicia
                 connect.Close();
                 ClearEntry();
                 SqlDataAdapter da = new SqlDataAdapter();
+                // when new student is added, the current id in the database will be incremented by 1
                 da.UpdateCommand = new SqlCommand("UPDATE id_increment SET ID = " + (id_inc + 1) + " WHERE ID = " + id_inc, connect);
                 connect.Open();
                 da.UpdateCommand.ExecuteNonQuery();
@@ -184,19 +185,22 @@ namespace Information_System_Galicia
         }
 
         private void StudentInfo_Load(object sender, EventArgs e) {
+            // disabling admin tools by default
             btnDel.Enabled = false;
             btnUpdate.Enabled = false;
             btnAdd.Enabled = false;
             groupBox1.Enabled = false;
             groupBox2.Enabled = false;
             Permission perm = new Permission();
-            if (perm.GetPermission() == "admin") {
+            if (perm.GetPermission() == "admin") { 
+                // if user logged in is admin reverting the tools to enabled
                 btnDel.Enabled = true;
                 btnUpdate.Enabled = true;
                 btnAdd.Enabled = true;
                 groupBox1.Enabled = true;
                 groupBox2.Enabled = true;
             }
+            // if editing is true hiding add button else hiding update and delete button
             if (this.edit == true)
             {
                 course();
@@ -222,6 +226,7 @@ namespace Information_System_Galicia
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
+                    // putting data to textboxes
                     this.txtStudId.Text = dr.GetString(0);
                     this.txtFname.Text = dr.GetString(1);
                     this.txtMname.Text = dr.GetString(2);
@@ -304,6 +309,7 @@ namespace Information_System_Galicia
 
         private void StudentInfo_FormClosed(object sender, FormClosedEventArgs e)
         {
+            // if editing is true and form is closed open the view student form
             if (this.edit == true) {
                 viewInfo vv = new viewInfo();
                 vv.Show();

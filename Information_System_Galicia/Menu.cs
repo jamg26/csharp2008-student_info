@@ -22,22 +22,24 @@ namespace Information_System_Galicia
 
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            inc_id();
+            inc_id(); // calling the add student button
         }
+
         public void inc_id() {
             StudentInfo add = new StudentInfo();
-            DateTime dt = new DateTime(2019, 07, 28);
+            DateTime dt = new DateTime(2019, 07, 28); // declaring date time format
             conn.Open();
-            SqlCommand sda = new SqlCommand("SELECT ID FROM id_increment", conn);
+            SqlCommand sda = new SqlCommand("SELECT ID FROM id_increment", conn); // getting id from the last student id value
             SqlDataReader dr = sda.ExecuteReader();
             if (dr.Read())
             {
-                add.txtStudId.Text = dt.ToString("yy") + "-" + dr.GetInt32(0);
+                add.txtStudId.Text = dt.ToString("yy") + "-" + dr.GetInt32(0); // formatting the student id 19-100000
             }
             add.id_inc = dr.GetInt32(0);
             conn.Close();
             add.Show();
         }
+
         public void getUserCount()
         {
             SqlCommand sda = new SqlCommand("SELECT COUNT(id) FROM security", conn);
@@ -49,6 +51,7 @@ namespace Information_System_Galicia
             }
             conn.Close();
         }
+
         public void getCourseCount()
         {
             SqlCommand sda = new SqlCommand("SELECT COUNT(CourseID) FROM Course", conn);
@@ -62,15 +65,18 @@ namespace Information_System_Galicia
         }
         private void Menu_Load(object sender, EventArgs e)
         {
-            getUserCount();
-            getCourseCount();
+            getUserCount(); // get stats of users
+            getCourseCount(); // get stats of course
+            // disabled by default
             addToolStripMenuItem.Enabled = false;
             courseAdd.Enabled = false;
             usersToolStripMenuItem.Visible = false;
             refreshToolStripMenuItem.Visible = false;
+            // checking permissions if the logged user is admin
             Permission permission = new Permission();
             if (permission.GetPermission() == "admin")
             {
+                // reverting toolstrip to enabled
                 addToolStripMenuItem.Enabled = true;
                 usersToolStripMenuItem.Visible = true;
                 courseAdd.Enabled = true;
@@ -84,17 +90,18 @@ namespace Information_System_Galicia
 
         public void getStudentsInfo() {
             conn.Open();
-            DataTable dt = new DataTable();
+            DataTable dt = new DataTable(); 
             DataTable du = new DataTable();
             DataTable dv = new DataTable();
+            // getting the count of the students
             SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Student_Info", conn);
             sda.Fill(dt);
             countReg.Text = Convert.ToString(dt.Rows.Count);
-
+            // getting the count of all male students
             SqlDataAdapter sdb = new SqlDataAdapter("SELECT * FROM Student_Info WHERE Gender = 'MALE'", conn);
             sdb.Fill(du);
             countMale.Text = Convert.ToString(du.Rows.Count);
-
+            // getting the count of all female students
             SqlDataAdapter sdc = new SqlDataAdapter("SELECT * FROM Student_Info WHERE Gender = 'FEMALE'", conn);
             sdc.Fill(dv);
             countFemale.Text = Convert.ToString(dv.Rows.Count);
@@ -129,9 +136,7 @@ namespace Information_System_Galicia
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e) {
-            //Login login = new Login();
-            //this.Hide();
-            //login.Show();
+            
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e) {

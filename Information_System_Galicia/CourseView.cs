@@ -36,6 +36,7 @@ namespace Information_System_Galicia
                 SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Course", conn);
                 sda.Fill(dt);
                 dataGridView1.DataSource = dt;
+                // auto sizing the size of datagridview
                 dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -61,7 +62,7 @@ namespace Information_System_Galicia
             ca.edit = true;
             this.Close();
             ca.Show();
-            ca.TopMost = true;
+            ca.TopMost = true; // optional, to make sure the courseAdd form is the top most
         }
     }
 }

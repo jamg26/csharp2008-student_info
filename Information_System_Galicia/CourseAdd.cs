@@ -13,8 +13,8 @@ namespace Information_System_Galicia
 {
     public partial class CourseAdd : Form
     {
-        public string courseid;
-        public bool edit;
+        public string courseid; // passing value here from courseView.cs doubleclick listener
+        public bool edit; // editing mode, passing value from courseview.cs doubleclick listener
         SqlConnection connect = dbClass.getConnection();
         public CourseAdd()
         {
@@ -24,16 +24,17 @@ namespace Information_System_Galicia
         private void button1_Click(object sender, EventArgs e)
         {
             connect.Open();
+            // checking if the course is exist
             SqlCommand cmd = new SqlCommand("SELECT * FROM Course WHERE CourseName='" + txtCourse.Text + "'", connect);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             connect.Close();
-            if (dt.Rows.Count > 0)
+            if (dt.Rows.Count > 0) // if course exist
             {
                 MessageBox.Show("Course exist!");
             }
-            else {
+            else { // if course not exist
                 try
                 {
                     SqlDataAdapter sda = new SqlDataAdapter();
@@ -42,7 +43,7 @@ namespace Information_System_Galicia
                     sda.InsertCommand.Parameters.Add("@cdes", SqlDbType.VarChar).Value = txtCourseDesc.Text;
 
                     connect.Open();
-                    sda.InsertCommand.ExecuteNonQuery();
+                    sda.InsertCommand.ExecuteNonQuery(); // inserting new course to the database
                     connect.Close();
 
                 }
@@ -66,28 +67,31 @@ namespace Information_System_Galicia
 
         private void CourseAdd_Load(object sender, EventArgs e)
         {
+            // setting default button and forms to disabled
             btnDel.Enabled = false;
             btnUpdate.Enabled = false;
             courseBtnAdd.Enabled = false;
             groupBox1.Enabled = false;
             btnDel.Visible = false;
             btnUpdate.Visible = false;
+
             Permission perm = new Permission();
             if (perm.GetPermission() == "admin") {
+                // if the user logged was admin reverting from disabled to enabled
                 btnDel.Enabled = true;
                 btnUpdate.Enabled = true;
                 courseBtnAdd.Enabled = true;
                 groupBox1.Enabled = true;
             }
-            if (this.edit == true) {
-                searchCourse();
+            if (this.edit == true) { // if editing is true, hiding add button 
+                searchCourse();      // showing update and delete button
                 courseBtnAdd.Hide();
                 btnDel.Visible = true;
                 btnUpdate.Visible = true;
             }
         }
 
-        public void searchCourse()
+        public void searchCourse() // course method this will called when the form is loaded
         {
             try
             {
@@ -131,6 +135,8 @@ namespace Information_System_Galicia
 
         private void CourseAdd_FormClosed(object sender, FormClosedEventArgs e)
         {
+            // if the editing is true
+            // and the form has been closed, it will open the view course form
             if (this.edit == true)
             {
                 CourseView vv = new CourseView();
