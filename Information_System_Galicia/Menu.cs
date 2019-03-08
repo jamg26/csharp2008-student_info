@@ -87,9 +87,6 @@ namespace Information_System_Galicia
             }
 
             getStudentsInfo();
-
-
-
         }
 
         public void getStudentsInfo() {
@@ -109,13 +106,9 @@ namespace Information_System_Galicia
             SqlDataAdapter sdc = new SqlDataAdapter("SELECT * FROM Student_Info WHERE Gender = 'FEMALE'", conn);
             sdc.Fill(dv);
             countFemale.Text = Convert.ToString(dv.Rows.Count);
-
-
             conn.Close();
-
             getUserCount();
             getCourseCount();
-
         }
 
         private void viewInformationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -124,55 +117,16 @@ namespace Information_System_Galicia
             info.Show();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             getStudentsInfo();
         }
-
-        private void logoutToolStripMenuItem_Click(object sender, EventArgs e) {
-            
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e) {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void logoutBtn_Click(object sender, EventArgs e)
         {
             Login login = new Login();
             this.Hide();
             login.Show();
-        }
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void courseAdd_Click(object sender, EventArgs e)

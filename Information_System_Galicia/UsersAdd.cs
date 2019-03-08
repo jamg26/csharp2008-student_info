@@ -116,8 +116,9 @@ namespace Information_System_Galicia
                 SqlDataAdapter sda = new SqlDataAdapter();
                 SqlCommandBuilder cmd = new SqlCommandBuilder(sda);
 
-                sda.UpdateCommand = new SqlCommand("UPDATE security SET username=@username, password=@pass, type=@perm WHERE id='" + this.userid + "'", connect);
+                sda.UpdateCommand = new SqlCommand("UPDATE security SET fullname=@fullname, username=@username, password=@pass, type=@perm WHERE id='" + this.userid + "'", connect);
                 sda.UpdateCommand.Parameters.Add("@username", SqlDbType.VarChar).Value = txtUser.Text;
+                sda.UpdateCommand.Parameters.Add("@fullname", SqlDbType.VarChar).Value = txtFullName.Text;
                 sda.UpdateCommand.Parameters.Add("@pass", SqlDbType.VarChar).Value = txtPass.Text;
                 sda.UpdateCommand.Parameters.Add("@perm", SqlDbType.VarChar).Value = cmbPerm.Text;
                 connect.Open();

@@ -95,7 +95,6 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Stats";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // countFemale
             // 
@@ -143,7 +142,6 @@
             this.countReg.Size = new System.Drawing.Size(10, 13);
             this.countReg.TabIndex = 1;
             this.countReg.Text = "-";
-            this.countReg.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -171,7 +169,6 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Database";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // dbName
             // 
@@ -248,7 +245,6 @@
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Client Information";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // txtUserType
             // 
@@ -267,7 +263,6 @@
             this.label3.Size = new System.Drawing.Size(85, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Permission level:";
-            this.label3.Click += new System.EventHandler(this.label3_Click_1);
             // 
             // lastLog
             // 
@@ -343,7 +338,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(761, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // courseToolStripMenuItem
             // 
