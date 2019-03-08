@@ -25,7 +25,6 @@ namespace Information_System_Galicia
         {
             if (txtUser.Text == "" || txtPass.Text == "" || cmbPerm.Text == "")
             {
-
                 MessageBox.Show("Fill up all forms!");
             }
             else {
@@ -70,9 +69,7 @@ namespace Information_System_Galicia
                         MessageBox.Show("New user added!");
                     }
                 }
-            
             }
-            
         }
 
         private void UsersAdd_Load(object sender, EventArgs e)
@@ -156,7 +153,6 @@ namespace Information_System_Galicia
                 connect.Close();
                 this.Close();
                 MessageBox.Show("Record successfully deleted!");
-
             }
             catch (Exception ex)
             {
