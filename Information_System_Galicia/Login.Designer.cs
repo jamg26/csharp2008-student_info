@@ -50,7 +50,6 @@
             this.textBox1.Size = new System.Drawing.Size(291, 20);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "Password";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             // 
             // textBox2
@@ -61,7 +60,6 @@
             this.textBox2.Size = new System.Drawing.Size(291, 20);
             this.textBox2.TabIndex = 1;
             this.textBox2.Text = "Username";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
             // 
             // button1
@@ -93,7 +91,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Authentication";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label3
             // 
@@ -111,7 +108,6 @@
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label3.MouseLeave += new System.EventHandler(this.label3_MouseLeave);
             this.label3.Click += new System.EventHandler(this.label3_Click);
-            this.label3.MouseHover += new System.EventHandler(this.label3_MouseHover);
             this.label3.MouseEnter += new System.EventHandler(this.label3_MouseEnter);
             // 
             // pictureBox1

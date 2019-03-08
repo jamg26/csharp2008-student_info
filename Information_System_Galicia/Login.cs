@@ -24,16 +24,6 @@ namespace Information_System_Galicia
             this.AcceptButton = button1;
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             button1.Hide();
@@ -89,44 +79,13 @@ namespace Information_System_Galicia
                 textBox2.Focus();
                 button1.Show();
             }
-
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void Login_Load(object sender, EventArgs e)
         {
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.WindowState = FormWindowState.Maximized;
-        }
-
-        private void button1_MouseHover(object sender, EventArgs e) {
-            
-        }
-
-        private void button1_MouseLeave(object sender, EventArgs e) {
-            
-        }
-
-        private void button1_Enter(object sender, EventArgs e) {
-            
-        }
-
-        private void button1_Leave(object sender, EventArgs e) {
-           
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void textBox2_Enter(object sender, EventArgs e) {
@@ -139,27 +98,9 @@ namespace Information_System_Galicia
             textBox1.ForeColor = Color.Black;
         }
 
-        private void pictureBox1_Click_1(object sender, EventArgs e) {
-
-        }
-
-        private void textBox2_KeyDown(object sender, KeyEventArgs e) {
-            
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void label3_Click(object sender, EventArgs e)
         {
             System.Environment.Exit(0); // exit the app
-        }
-
-        private void label3_MouseHover(object sender, EventArgs e)
-        {
-
         }
 
         private void label3_MouseEnter(object sender, EventArgs e)
@@ -171,6 +112,5 @@ namespace Information_System_Galicia
         {
             label3.Font = new Font(label3.Font, FontStyle.Regular);
         }
-
     }
 }
