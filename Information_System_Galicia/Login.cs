@@ -9,10 +9,8 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 
-
 namespace Information_System_Galicia
 {
-    
     public partial class Login : Form
     {
         SqlConnection conn = dbClass.getConnection();
@@ -80,7 +78,6 @@ namespace Information_System_Galicia
                 button1.Show();
             }
         }
-
 
         private void Login_Load(object sender, EventArgs e)
         {
