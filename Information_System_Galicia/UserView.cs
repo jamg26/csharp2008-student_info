@@ -53,11 +53,6 @@ namespace Information_System_Galicia
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             UsersAdd ca = new UsersAdd();
@@ -68,6 +63,5 @@ namespace Information_System_Galicia
             ca.Show();
             ca.TopMost = true;
         }
-
     }
 }
