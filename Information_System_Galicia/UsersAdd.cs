@@ -88,8 +88,6 @@ namespace Information_System_Galicia {
         private void button1_Click_1(object sender, EventArgs e) {
             try {
                 SqlDataAdapter sda = new SqlDataAdapter();
-                SqlCommandBuilder cmd = new SqlCommandBuilder(sda);
-
                 sda.UpdateCommand = new SqlCommand("UPDATE security SET fullname=@fullname, username=@username, password=@pass, type=@perm WHERE id='" + this.userid + "'", connect);
                 sda.UpdateCommand.Parameters.Add("@username", SqlDbType.VarChar).Value = txtUser.Text;
                 sda.UpdateCommand.Parameters.Add("@fullname", SqlDbType.VarChar).Value = txtFullName.Text;

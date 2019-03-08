@@ -11,7 +11,6 @@ using System.Data.SqlClient;
 namespace Information_System_Galicia {
     public partial class viewInfo : Form {
         SqlConnection conn = dbClass.getConnection();
-        public bool isAdmin;
         public viewInfo() {
             InitializeComponent();
         }

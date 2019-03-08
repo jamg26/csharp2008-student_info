@@ -15,10 +15,6 @@ namespace Information_System_Galicia {
             string dbName = "Info_Sys_Galicia";
             string dbUser = "jamg";
             SqlConnection conn = new SqlConnection("Data Source = " + dbServer + "; Initial Catalog = " + dbName + "; User ID=" + dbUser + ";Password=Jamuel26;");
-            //Menu mm = new Menu();
-            //mm.dbServer.Text = dbServer;
-            //mm.dbName.Text = dbName;
-            //mm.dbUser.Text = dbUser;
             return conn;
         }
         public string getDbServer() {

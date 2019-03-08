@@ -44,16 +44,7 @@ namespace Information_System_Galicia
                     this.perm = dr.GetString(4); // passing value from user type to perm variable
                     this.name = dr.GetString(1);
                     conn.Close();
-                    if (this.perm == "admin") // if the user type of logged user is admin
-                    {
-                        permission.UpdatePermission(this.perm);
-                        // optional put messagebox "You are logged in as admin"
-                    }
-                    else
-                    {
-                        permission.UpdatePermission(this.perm);
-                        // optional put messagebox "You are logged in as user"
-                    }
+                    permission.UpdatePermission(this.perm);
                 }
                 // setting menu items values
                 DateTime dtime = DateTime.Now;

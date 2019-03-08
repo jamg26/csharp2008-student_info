@@ -121,9 +121,7 @@ namespace Information_System_Galicia {
         private void button2_Click(object sender, EventArgs e) {
             try {
                 SqlDataAdapter sda = new SqlDataAdapter();
-                SqlCommandBuilder cmd = new SqlCommandBuilder(sda);
                 sda.UpdateCommand = new SqlCommand("DELETE FROM Course WHERE CourseID='" + this.courseid + "'", connect);
-
                 connect.Open();
                 sda.UpdateCommand.ExecuteNonQuery();
                 connect.Close();
